@@ -1,0 +1,120 @@
+<html>
+  <head>
+    <title>DSAA 5024 - Assignment 1</title>
+    <script src="https://d3js.org/d3.v7.js"></script>
+    <script src="https://unpkg.com/@tonejs/midi"></script>
+  </head>
+  <body>
+    <div id="svg"></div>
+    <script>
+      // load a midi file in the browser
+
+      let margin = { top: 10, right: 50, bottom: 30, left: 10 };
+      let svg_size = Math.max(
+        document.documentElement.clientWidth - margin.left - margin.right - 20,
+        document.documentElement.clientHeight
+      );
+      let vp = {
+        width: svg_size,
+        height: svg_size,
+      };
+      let data = [];
+      let x, y;
+      let svg_density = define_svg("#svg");
+      let color = [
+        "#a6cee3",
+        "#1f78b4",
+        "#b2df8a",
+
+        "#fb9a99",
+        "#e31a1c",
+        "#fdbf6f",
+        "#ff7f00",
+        "#33a02c",
+        "#cab2d6",
+        "#f0c2a2",
+        "#6a3d9a",
+
+        "#b15928",
+      ];
+      load_data();
+
+      async function load_data() {
+        data = await Midi.fromUrl("./data/albeniz/alb_se9.mid");
+        console.log(data);
+
+        //the file name decoded from the first track
+        // const name = midi.name;
+        // //get the tracks
+        // midi.tracks.forEach((track) => {
+        //   //tracks have notes and controlChanges
+        //   //notes are an array
+        //   const notes = track.notes;
+        //   notes.forEach((note) => {
+        //     //note.midi, note.time, note.duration, note.name
+        //   });
+
+        //   //the control changes are an object
+        //   //the keys are the CC number
+        //   track.controlChanges[64];
+        //   //they are also aliased to the CC number's common name (if it has one)
+        //   track.controlChanges.sustain.forEach((cc) => {
+        //     // cc.ticks, cc.value, cc.time
+        //   });
+
+        //   //the track also has a channel and instrument
+        //   //track.instrument.name
+        // }
+        // );
+        for (let index = 6; index < 13; index++) {
+          render(data.tracks[index].notes, index);
+        }
+      }
+      /**
+       * add a svg to the given place
+       * @param [selector] a string represent a class/id/tag
+       * @return the svg object
+       */
+      function define_svg(selector) {
+        let svg = d3
+          .select(selector)
+          .append("svg")
+          .attr("width", 10 * (vp.width + margin.left + margin.right))
+          .attr("height", vp.height + margin.top + margin.bottom)
+          .append("g")
+          .attr("transform", "translate(" + margin.right + "," + -80 + ")");
+        return svg;
+      }
+      function render(ddata, index) {
+        var x = d3
+          .scaleLinear()
+          .domain([0, 260])
+          .range([0, vp.width * 5]);
+
+        var y = d3.scaleLinear().domain([0, 1]).range([0, 120]);
+
+        let midi = d3.scaleLinear().domain([0, 120]).range([0, vp.height/2]);
+        let area = d3
+          .area()
+          .x(function (d) {
+            return x(d.time);
+          })
+          .y0(function (d) {
+            return midi(d.midi);
+          })
+          .y1(function (d) {
+            return midi(d.midi) + y(d.velocity);
+          })
+
+          .curve(d3.curveBasis);
+        svg_density
+          .selectAll("#Selector")
+          .data([ddata])
+          .join("path")
+          .attr("fill", color[index])
+          // .attr("stroke", color[index])
+          .attr("d", (d) => area(d));
+      }
+    </script>
+  </body>
+</html>
