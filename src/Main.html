@@ -31,30 +31,41 @@
           margin.left -
           margin.right -
           20,
-        height: document.documentElement.clientHeight * 0.3 - 20,
+        height: document.documentElement.clientHeight * 0.3 - 30,
       };
       let data = [];
+      let names = [
+        "alb_esp1.mid",
+        "alb_esp2.mid",
+        "alb_esp3.mid",
+        "alb_esp4.mid",
+        "alb_esp5.mid",
+        "alb_esp6.mid",
+        "alb_se1.mid",
+        "alb_se2.mid",
+        "alb_se3.mid",
+        "alb_se4.mid",
+        "alb_se5.mid",
+        "alb_se6.mid",
+        "alb_se7.mid",
+        "alb_se8.mid",
+        "alb_se9.mid",
+      ];
       let x, y;
       let svg_density = define_svg("#svg");
-      let color = [
-        "#a6cee3",
-        "#1f78b4",
-        "#b2df8a",
+      let color = {
+        "Piano right": "#a6cee3",
+        "Piano left": "#1f78b4",
+        "1er Piano 1": "#a6cee3",
+        "1er Piano 2": "#1f78b4",
+        "2d Piano 1": "#b1d5c8",
+        "2d Piano 2": "#80a492",
+        Violoncelle: "#ffee6f",
+      };
+      load_data(names[0]);
 
-        "#fb9a99",
-        "#e31a1c",
-        "#fdbf6f",
-        "#ff7f00",
-        "#33a02c",
-        "#cab2d6",
-        "#f0c2a2",
-        "#6a3d9a",
-        "#b15928",
-      ];
-      load_data();
-
-      async function load_data() {
-        data = await Midi.fromUrl("../data/albeniz/alb_se4.mid");
+      async function load_data(name) {
+        data = await Midi.fromUrl("../data/albeniz/" + name);
         console.log(data);
 
         //the file name decoded from the first track
@@ -81,6 +92,7 @@
         // }
         // );
         for (let index = 0; index < 20; index++) {
+          if (data.tracks[index] == undefined) break;
           if (data.tracks[index].notes.length != 0)
             render(data.tracks[index].notes, index);
         }
@@ -126,7 +138,7 @@
           .selectAll("#Selector")
           .data([ddata])
           .join("path")
-          .attr("fill", color[index])
+          .attr("fill", color[data.tracks[index].name])
           // .attr("stroke", color[index])
           .attr("d", (d) => area(d));
       }
