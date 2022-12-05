@@ -1,22 +1,37 @@
 <html>
   <head>
-    <title>DSAA 5024 - Assignment 1</title>
+    <title>Music visualization</title>
     <script src="https://d3js.org/d3.v7.js"></script>
     <script src="https://unpkg.com/@tonejs/midi"></script>
   </head>
-  <body>
-    <div id="svg"></div>
+
+  <body class="main">
+    <div style="display: flex; flex-direction: column">
+      <div style="display: flex; height: calc(70vh - 30px)">
+        <div class="view" style="width: 20vw"></div>
+        <div class="view" style="width: 80vw"></div>
+      </div>
+      <div
+        class="view"
+        id="svg"
+        style="height: 30vh; width: calc(100vw - 30px); overflow-x: scroll"
+      ></div>
+    </div>
+
     <script>
       // load a midi file in the browser
-
-      let margin = { top: 10, right: 50, bottom: 30, left: 10 };
-      let svg_size = Math.max(
-        document.documentElement.clientWidth - margin.left - margin.right - 20,
-        document.documentElement.clientHeight
-      );
+      let margin = { top: 0, right: 40, bottom: 0, left: 0 };
+      // let svg_size = Math.max(
+      //   document.documentElement.clientWidth - margin.left - margin.right - 20,
+      //   document.documentElement.clientHeight * 0.3
+      // );
       let vp = {
-        width: svg_size,
-        height: svg_size,
+        width:
+          document.documentElement.clientWidth -
+          margin.left -
+          margin.right -
+          20,
+        height: document.documentElement.clientHeight * 0.3 - 20,
       };
       let data = [];
       let x, y;
@@ -34,13 +49,12 @@
         "#cab2d6",
         "#f0c2a2",
         "#6a3d9a",
-
         "#b15928",
       ];
       load_data();
 
       async function load_data() {
-        data = await Midi.fromUrl("./data/albeniz/alb_se9.mid");
+        data = await Midi.fromUrl("../data/albeniz/alb_se4.mid");
         console.log(data);
 
         //the file name decoded from the first track
@@ -66,8 +80,9 @@
         //   //track.instrument.name
         // }
         // );
-        for (let index = 6; index < 13; index++) {
-          render(data.tracks[index].notes, index);
+        for (let index = 0; index < 20; index++) {
+          if (data.tracks[index].notes.length != 0)
+            render(data.tracks[index].notes, index);
         }
       }
       /**
@@ -79,10 +94,10 @@
         let svg = d3
           .select(selector)
           .append("svg")
-          .attr("width", 10 * (vp.width + margin.left + margin.right))
+          .attr("width", 5 * (vp.width + margin.left + margin.right))
           .attr("height", vp.height + margin.top + margin.bottom)
           .append("g")
-          .attr("transform", "translate(" + margin.right + "," + -80 + ")");
+          .attr("transform", "translate(" + margin.right + "," + 0 + ")");
         return svg;
       }
       function render(ddata, index) {
@@ -91,9 +106,9 @@
           .domain([0, 260])
           .range([0, vp.width * 5]);
 
-        var y = d3.scaleLinear().domain([0, 1]).range([0, 120]);
+        var y = d3.scaleLinear().domain([0, 1]).range([0, 50]);
 
-        let midi = d3.scaleLinear().domain([0, 120]).range([0, vp.height/2]);
+        let midi = d3.scaleLinear().domain([0, 120]).range([0, vp.height]);
         let area = d3
           .area()
           .x(function (d) {
@@ -116,5 +131,16 @@
           .attr("d", (d) => area(d));
       }
     </script>
+    <style>
+      .view {
+        border-radius: 17px;
+        box-shadow: 2px 2px 3px #beb1aa;
+        margin: 5px;
+        background-color: #f5f2e9;
+      }
+      .main {
+        background-color: #c7c6b6;
+      }
+    </style>
   </body>
 </html>
