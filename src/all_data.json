@@ -1,0 +1,2795 @@
+{
+    "Bach": [
+        {
+            "name": "Bwv1014 Harpsicord and Violin Sonata 1mov.mid",
+            "scale": "minor",
+            "key": "D",
+            "duration": 267.52105725000024,
+            "bpm": 52.15284831397267,
+            "author": "Bach"
+        },
+        {
+            "name": "Bwv1014 Harpsicord and Violin Sonata 2mov.mid",
+            "scale": "minor",
+            "key": "D",
+            "duration": 188.50365787500021,
+            "bpm": 172.1262242417541,
+            "author": "Bach"
+        },
+        {
+            "name": "Bwv1014 Harpsicord and Violin Sonata 3mov.mid",
+            "scale": "minor",
+            "key": "D",
+            "duration": 195.30144532291686,
+            "bpm": 35.25288535287821,
+            "author": "Bach"
+        },
+        {
+            "name": "Bwv1014 Harpsicord and Violin Sonata 4mov.mid",
+            "scale": "minor",
+            "key": "D",
+            "duration": 222.7449128958334,
+            "bpm": 93.4920507653176,
+            "author": "Bach"
+        }
+    ],
+    "Beethoven": [
+        {
+            "name": "Piano Concerto n1 op15 1mov.mid",
+            "duration": 888.2074670000003,
+            "bpm": 124.7415283101548,
+            "author": "Beethoven"
+        },
+        {
+            "name": "Piano Concerto n1 op15 2mov.mid",
+            "duration": 479.46396599999997,
+            "bpm": 54.73332849444792,
+            "author": "Beethoven"
+        },
+        {
+            "name": "Piano Concerto n1 op15 3mov.mid",
+            "scale": "major",
+            "key": "C",
+            "duration": 570.3535140000001,
+            "bpm": 123.0645487780124,
+            "author": "Beethoven"
+        },
+        {
+            "name": "Piano Concerto n2 op19 1mov.mid",
+            "scale": "major",
+            "key": "Bb",
+            "duration": 786.9069635333326,
+            "bpm": 141.60715346226783,
+            "author": "Beethoven"
+        },
+        {
+            "name": "Piano Concerto n2 op19 2mov.mid",
+            "scale": "major",
+            "key": "Eb",
+            "duration": 245.917681,
+            "bpm": 55.1111160351869,
+            "author": "Beethoven"
+        },
+        {
+            "name": "Piano Concerto n2 op19 3mov.mid",
+            "scale": "major",
+            "key": "Bb",
+            "duration": 355.08192049999997,
+            "bpm": 148.42857031237807,
+            "author": "Beethoven"
+        },
+        {
+            "name": "Piano Concerto n3 op37 1mov.mid",
+            "scale": "major",
+            "key": "Eb",
+            "duration": 918.496320800001,
+            "bpm": 114.13981081260235,
+            "author": "Beethoven"
+        },
+        {
+            "name": "Piano Concerto n3 op37 2mov.mid",
+            "scale": "major",
+            "key": "E",
+            "duration": 313.1526756166666,
+            "bpm": 47.039473555923614,
+            "author": "Beethoven"
+        },
+        {
+            "name": "Piano Concerto n3 op37 3mov.mid",
+            "scale": "major",
+            "key": "Eb",
+            "duration": 455.68217164166606,
+            "bpm": 114.43959772461793,
+            "author": "Beethoven"
+        },
+        {
+            "name": "Piano Concerto n4 op58 1mov.mid",
+            "scale": "major",
+            "key": "G",
+            "duration": 1045.9008861333318,
+            "bpm": 112.96974201070869,
+            "author": "Beethoven"
+        },
+        {
+            "name": "Piano Concerto n4 op58 2mov.mid",
+            "scale": "major",
+            "key": "G",
+            "duration": 231.4253089583334,
+            "bpm": 55.083328840284494,
+            "author": "Beethoven"
+        },
+        {
+            "name": "Piano Concerto n4 op58 3mov.mid",
+            "scale": "major",
+            "key": "G",
+            "duration": 552.842023125,
+            "bpm": 138.9345261432888,
+            "author": "Beethoven"
+        },
+        {
+            "name": "Piano Concerto n5 op73 1mov ''Emperor''.mid",
+            "scale": "major",
+            "key": "Eb",
+            "duration": 1225.9136723999989,
+            "bpm": 109.98801392469285,
+            "author": "Beethoven"
+        },
+        {
+            "name": "Piano Concerto n5 op73 2-3mov ''Emperor''.mid",
+            "scale": "major",
+            "key": "B",
+            "duration": 1108.845743458338,
+            "bpm": 85.31683815934609,
+            "author": "Beethoven"
+        },
+        {
+            "name": "Piano Concerto No5,Mov.1.mid",
+            "scale": "major",
+            "key": "C",
+            "duration": 1127.2896236916683,
+            "bpm": 117.67248320881593,
+            "author": "Beethoven"
+        },
+        {
+            "name": "Piano Concerto No5,Mov.3.mid",
+            "scale": "major",
+            "key": "C",
+            "duration": 601.9531908499999,
+            "bpm": 116.17035055152209,
+            "author": "Beethoven"
+        },
+        {
+            "name": "Violin Concerto op61 1mov.mid",
+            "scale": "major",
+            "key": "D",
+            "duration": 1318.2037809666647,
+            "bpm": 107.6376353007342,
+            "author": "Beethoven"
+        },
+        {
+            "name": "Violin Concerto op61 2-3movs.mid",
+            "scale": "major",
+            "key": "G",
+            "duration": 1029.5147300166652,
+            "bpm": 76.21670996013692,
+            "author": "Beethoven"
+        }
+    ],
+    "Bizet": [
+        {
+            "name": "Bizet Carmen Prelude.mid",
+            "scale": "major",
+            "key": "A",
+            "duration": 195.4347735,
+            "bpm": 102.49999187501484,
+            "author": "Bizet"
+        },
+        {
+            "name": "Bizet Symphony in C 1mov.mid",
+            "scale": "major",
+            "key": "C",
+            "duration": 638.7001611666631,
+            "bpm": 306.23681193620706,
+            "author": "Bizet"
+        },
+        {
+            "name": "Bizet Symphony in C 2mov.mid",
+            "scale": "major",
+            "key": "C",
+            "duration": 558.9489000000017,
+            "bpm": 56.070832485619675,
+            "author": "Bizet"
+        },
+        {
+            "name": "Bizet Symphony in C 3mov.mid",
+            "scale": "major",
+            "key": "G",
+            "duration": 389.0470353749955,
+            "bpm": 326.76545429376546,
+            "author": "Bizet"
+        },
+        {
+            "name": "Bizet Symphony in C 4mov.mid",
+            "scale": "major",
+            "key": "C",
+            "duration": 580.5909696000023,
+            "bpm": 128.1348402043383,
+            "author": "Bizet"
+        }
+    ],
+    "Brahms": [
+        {
+            "name": "Concerto for Piano n1 op15 1mov.mid",
+            "scale": "major",
+            "key": "F",
+            "duration": 1325.1893585416658,
+            "bpm": 133.95917340992284,
+            "author": "Brahms"
+        },
+        {
+            "name": "Concerto for Piano n1 op15 2mov.mid",
+            "scale": "major",
+            "key": "D",
+            "duration": 712.3963001166667,
+            "bpm": 53.54904406119039,
+            "author": "Brahms"
+        },
+        {
+            "name": "Concerto for Piano n1 op15 3mov.mid",
+            "scale": "major",
+            "key": "F",
+            "duration": 711.3542053000025,
+            "bpm": 89.2302627684802,
+            "author": "Brahms"
+        },
+        {
+            "name": "Symphony n2 op73 1mov.mid",
+            "scale": "major",
+            "key": "D",
+            "duration": 1230.9483678249999,
+            "bpm": 102.89841347028928,
+            "author": "Brahms"
+        },
+        {
+            "name": "Symphony n2 op73 2mov.mid",
+            "scale": "major",
+            "key": "B",
+            "duration": 562.9971360666653,
+            "bpm": 52.97550354937894,
+            "author": "Brahms"
+        },
+        {
+            "name": "Symphony n2 op73 3mov.mid",
+            "scale": "major",
+            "key": "G",
+            "duration": 317.6525813750001,
+            "bpm": 125.76439697398473,
+            "author": "Brahms"
+        },
+        {
+            "name": "Symphony n2 op73 4mov.mid",
+            "scale": "major",
+            "key": "D",
+            "duration": 588.8310218333332,
+            "bpm": 176.65196895718861,
+            "author": "Brahms"
+        },
+        {
+            "name": "Symphony n3 op90 1mov.mid",
+            "scale": "major",
+            "key": "F",
+            "duration": 806.7687621916677,
+            "bpm": 141.8056569919295,
+            "author": "Brahms"
+        },
+        {
+            "name": "Symphony n3 op90 2mov.mid",
+            "scale": "major",
+            "key": "C",
+            "duration": 565.1672792500004,
+            "bpm": 57.17866814966928,
+            "author": "Brahms"
+        },
+        {
+            "name": "Symphony n3 op90 3mov.mid",
+            "scale": "major",
+            "key": "Eb",
+            "duration": 401.2131855916664,
+            "bpm": 36.77257739215577,
+            "author": "Brahms"
+        },
+        {
+            "name": "Symphony n3 op90 4mov.mid",
+            "scale": "major",
+            "key": "Ab",
+            "duration": 522.9708468166697,
+            "bpm": 155.32336003539547,
+            "author": "Brahms"
+        },
+        {
+            "name": "Symphony n4 op98 1mov.mid",
+            "duration": 772.9855555166668,
+            "bpm": 130.1064387642808,
+            "author": "Brahms"
+        }
+    ],
+    "Dvorak": [
+        {
+            "name": "Dvorak Slavonic dance n8.mid",
+            "scale": "major",
+            "key": "Bb",
+            "duration": 246.47918266666667,
+            "bpm": 213.10036972109265,
+            "author": "Dvorak"
+        },
+        {
+            "name": "Dvorak Symphony op70 n7 1mov.mid",
+            "scale": "major",
+            "key": "F",
+            "duration": 598.495784666663,
+            "bpm": 95.18517895031925,
+            "author": "Dvorak"
+        },
+        {
+            "name": "Dvorak Symphony op70 n7 2mov.mid",
+            "scale": "major",
+            "key": "F",
+            "duration": 533.1030241249993,
+            "bpm": 50.18889096694788,
+            "author": "Dvorak"
+        },
+        {
+            "name": "Dvorak Symphony op70 n7 3mov.mid",
+            "scale": "major",
+            "key": "F",
+            "duration": 419.46999337500137,
+            "bpm": 219.84517749195317,
+            "author": "Dvorak"
+        },
+        {
+            "name": "Dvorak Symphony op70 n7 4mov.mid",
+            "scale": "major",
+            "key": "F",
+            "duration": 541.0932279166699,
+            "bpm": 195.79762174308834,
+            "author": "Dvorak"
+        },
+        {
+            "name": "Dvorak Trio op26.mid",
+            "scale": "major",
+            "key": "Bb",
+            "duration": 58.8,
+            "bpm": 113.00005355007231,
+            "author": "Dvorak"
+        },
+        {
+            "name": "Violin & Piano Sonatina.mid",
+            "scale": "major",
+            "key": "C",
+            "duration": 368.45400299999994,
+            "bpm": 110.00010642464568,
+            "author": "Dvorak"
+        }
+    ],
+    "Grieg": [
+        {
+            "name": "Peer Gynt Suite No. 1, Morning Mood.mid",
+            "scale": "major",
+            "key": "Eb",
+            "duration": 249.6956963125,
+            "bpm": 61.746459117412776,
+            "author": "Grieg"
+        }
+    ],
+    "Haendel": [
+        {
+            "name": "Water Music 01 Overture.mid",
+            "scale": "major",
+            "key": "C",
+            "duration": 301.28839266666665,
+            "bpm": 123.52783189961383,
+            "author": "Haendel"
+        },
+        {
+            "name": "Water Music 1mov Allegro.mid",
+            "scale": "major",
+            "key": "F",
+            "duration": 159.95393800000002,
+            "bpm": 88.00004712004298,
+            "author": "Haendel"
+        },
+        {
+            "name": "Water Music 2mov Air.mid",
+            "scale": "major",
+            "key": "F",
+            "duration": 271.9309277499999,
+            "bpm": 63.23460833933937,
+            "author": "Haendel"
+        },
+        {
+            "name": "Water Music 3mov Hornpipe.mid",
+            "scale": "major",
+            "key": "F",
+            "duration": 47.660557,
+            "bpm": 165.0001318335333,
+            "author": "Haendel"
+        },
+        {
+            "name": "Water Music 4mov Bouree.mid",
+            "scale": "major",
+            "key": "F",
+            "duration": 54.797580499999995,
+            "bpm": 142.50012500013753,
+            "author": "Haendel"
+        },
+        {
+            "name": "Water Music 5mov Andante.mid",
+            "scale": "major",
+            "key": "F",
+            "duration": 171.69153350000002,
+            "bpm": 41.60000856000251,
+            "author": "Haendel"
+        },
+        {
+            "name": "Water Music 6mov Alla Hornpipe.mid",
+            "scale": "major",
+            "key": "D",
+            "duration": 193.45731550000002,
+            "bpm": 176.52185043490695,
+            "author": "Haendel"
+        },
+        {
+            "name": "Water Music Allegro 2.mid",
+            "scale": "major",
+            "key": "F",
+            "duration": 272.675475609375,
+            "bpm": 107.50001437500359,
+            "author": "Haendel"
+        },
+        {
+            "name": "Water Music Bourree 2.mid",
+            "scale": "major",
+            "key": "F",
+            "duration": 48.945429,
+            "bpm": 170.00001000019705,
+            "author": "Haendel"
+        },
+        {
+            "name": "Water Music Dialogue.mid",
+            "scale": "major",
+            "key": "F",
+            "duration": 457.4115690625,
+            "bpm": 78.00003573335083,
+            "author": "Haendel"
+        },
+        {
+            "name": "Water Music Suite n2 Hwv349 1mov.mid",
+            "scale": "major",
+            "key": "C",
+            "duration": 132.60625,
+            "bpm": 70,
+            "author": "Haendel"
+        },
+        {
+            "name": "Water Music Suite n2 Hwv349 2mov.mid",
+            "scale": "major",
+            "key": "C",
+            "duration": 194.59527998333326,
+            "bpm": 176.95891056270295,
+            "author": "Haendel"
+        },
+        {
+            "name": "Water Music Suite n2 Hwv349 5mov.mid",
+            "duration": 152.3720016,
+            "bpm": 86.00005160003096,
+            "author": "Haendel"
+        },
+        {
+            "name": "Water Music Suite n3 Hwv350 3mov.mid",
+            "scale": "major",
+            "key": "C",
+            "duration": 126.78257699999999,
+            "bpm": 115.00002875000719,
+            "author": "Haendel"
+        },
+        {
+            "name": "Water Music Suite n3 Hwv350 4mov.mid",
+            "scale": "major",
+            "key": "C",
+            "duration": 97.85,
+            "bpm": 120,
+            "author": "Haendel"
+        }
+    ],
+    "Haydn": [
+        {
+            "name": "12 Menuets HobIX3.mid",
+            "scale": "major",
+            "key": "D",
+            "duration": 1022.631755625,
+            "bpm": 173.33342333342333,
+            "author": "Haydn"
+        },
+        {
+            "name": "12 Menuets HobIX8.mid",
+            "scale": "major",
+            "key": "C",
+            "duration": 1128.890908625,
+            "bpm": 173.33342333342333,
+            "author": "Haydn"
+        },
+        {
+            "name": "20 Variations for Keyboard HobXVII2.mid",
+            "scale": "major",
+            "key": "G",
+            "duration": 917.91215046875,
+            "bpm": 288.000088000088,
+            "author": "Haydn"
+        },
+        {
+            "name": "Capriccio.mid",
+            "scale": "major",
+            "key": "G",
+            "duration": 429.90000000000003,
+            "bpm": 150,
+            "author": "Haydn"
+        },
+        {
+            "name": "German Dance No.1.mid",
+            "scale": "major",
+            "key": "D",
+            "duration": 37.32568541666664,
+            "bpm": 123.45601831490774,
+            "author": "Haydn"
+        },
+        {
+            "name": "German Dance No.5.mid",
+            "scale": "major",
+            "key": "D",
+            "duration": 37.032184,
+            "bpm": 155.00031000062,
+            "author": "Haydn"
+        },
+        {
+            "name": "German Dance No.6.mid",
+            "scale": "major",
+            "key": "E",
+            "duration": 31.144857333333334,
+            "bpm": 184.30008969271032,
+            "author": "Haydn"
+        },
+        {
+            "name": "Miniature Concerto for Piano and Orchestra.mid",
+            "scale": "major",
+            "key": "C",
+            "duration": 148.63020833333334,
+            "bpm": 120,
+            "author": "Haydn"
+        },
+        {
+            "name": "Piano Piece n1.mid",
+            "scale": "major",
+            "key": "D",
+            "duration": 372.1139514375001,
+            "bpm": 238.66669502224303,
+            "author": "Haydn"
+        },
+        {
+            "name": "Piano Piece n10.mid",
+            "scale": "major",
+            "key": "G",
+            "duration": 159.72651766666667,
+            "bpm": 227.50007125010688,
+            "author": "Haydn"
+        },
+        {
+            "name": "Piano Piece n2.mid",
+            "scale": "major",
+            "key": "G",
+            "duration": 63.655385312499995,
+            "bpm": 339.000039000039,
+            "author": "Haydn"
+        },
+        {
+            "name": "Piano Piece n3.mid",
+            "scale": "major",
+            "key": "Bb",
+            "duration": 190.46875,
+            "bpm": 60,
+            "author": "Haydn"
+        },
+        {
+            "name": "Piano Piece n4.mid",
+            "scale": "major",
+            "key": "Bb",
+            "duration": 233.57265625,
+            "bpm": 157.77777777777777,
+            "author": "Haydn"
+        },
+        {
+            "name": "Piano Piece n5.mid",
+            "scale": "major",
+            "key": "Eb",
+            "duration": 255.66354166666665,
+            "bpm": 280,
+            "author": "Haydn"
+        },
+        {
+            "name": "Piano Piece n6.mid",
+            "scale": "major",
+            "key": "Eb",
+            "duration": 73.58125,
+            "bpm": 266.6666666666667,
+            "author": "Haydn"
+        },
+        {
+            "name": "Piano Piece n7.mid",
+            "scale": "major",
+            "key": "F",
+            "duration": 180.40890133333335,
+            "bpm": 52.222223240740824,
+            "author": "Haydn"
+        },
+        {
+            "name": "Piano Piece n8.mid",
+            "scale": "major",
+            "key": "Bb",
+            "duration": 51.106430374999995,
+            "bpm": 135.000135000135,
+            "author": "Haydn"
+        },
+        {
+            "name": "Piano Piece n9.mid",
+            "scale": "major",
+            "key": "A",
+            "duration": 192.11875,
+            "bpm": 240,
+            "author": "Haydn"
+        },
+        {
+            "name": "Sonata n01 1mov XVI8.mid",
+            "scale": "major",
+            "key": "G",
+            "duration": 119.8290474375,
+            "bpm": 95.00004500004499,
+            "author": "Haydn"
+        },
+        {
+            "name": "Sonata n01 2mov XVI8.mid",
+            "scale": "major",
+            "key": "G",
+            "duration": 44.73553218749999,
+            "bpm": 130.00013000013,
+            "author": "Haydn"
+        },
+        {
+            "name": "Sonata n01 3mov XVI8.mid",
+            "scale": "major",
+            "key": "G",
+            "duration": 66.852625875,
+            "bpm": 282.5000325000325,
+            "author": "Haydn"
+        },
+        {
+            "name": "Sonata n01 4mov XVI8.mid",
+            "scale": "major",
+            "key": "G",
+            "duration": 33.2163129375,
+            "bpm": 130.00013000013,
+            "author": "Haydn"
+        },
+        {
+            "name": "Sonata n02 1mov XVI7.mid",
+            "scale": "major",
+            "key": "C",
+            "duration": 57.49392520833333,
+            "bpm": 98.3334621557291,
+            "author": "Haydn"
+        },
+        {
+            "name": "Sonata n03 1mov XVI9.mid",
+            "scale": "major",
+            "key": "F",
+            "duration": 111.31238868749999,
+            "bpm": 90.00009000009,
+            "author": "Haydn"
+        },
+        {
+            "name": "Sonata n03 2mov XVI9.mid",
+            "scale": "major",
+            "key": "F",
+            "duration": 207.325,
+            "bpm": 125,
+            "author": "Haydn"
+        },
+        {
+            "name": "Sonata n03 3mov XVI9.mid",
+            "scale": "major",
+            "key": "F",
+            "duration": 41.540137031250005,
+            "bpm": 140.00014000014,
+            "author": "Haydn"
+        },
+        {
+            "name": "Sonata n10 1mov XVI1.mid",
+            "scale": "major",
+            "key": "C",
+            "duration": 165.07323459375,
+            "bpm": 145.00003625000906,
+            "author": "Haydn"
+        },
+        {
+            "name": "Sonata n10 2mov XVI1.mid",
+            "scale": "major",
+            "key": "C",
+            "duration": 149.21134805208334,
+            "bpm": 302.5022939774309,
+            "author": "Haydn"
+        },
+        {
+            "name": "Sonata n10 3mov XVI1.mid",
+            "scale": "major",
+            "key": "C",
+            "duration": 188.96354166666666,
+            "bpm": 120,
+            "author": "Haydn"
+        },
+        {
+            "name": "Sonata n29 1mov XVI45.mid",
+            "scale": "major",
+            "key": "Eb",
+            "duration": 480.66947916666675,
+            "bpm": 140.57142857142858,
+            "author": "Haydn"
+        },
+        {
+            "name": "Sonata n29 2mov XVI45.mid",
+            "scale": "major",
+            "key": "Ab",
+            "duration": 404.086134375,
+            "bpm": 65.000065000065,
+            "author": "Haydn"
+        },
+        {
+            "name": "Sonata n29 3mov XVI45.mid",
+            "scale": "major",
+            "key": "Eb",
+            "duration": 340.56549056250003,
+            "bpm": 107.50005312503953,
+            "author": "Haydn"
+        },
+        {
+            "name": "Sonata n41 1mov XVI26.mid",
+            "scale": "major",
+            "key": "A",
+            "duration": 442.5509499374999,
+            "bpm": 175.38467076928617,
+            "author": "Haydn"
+        },
+        {
+            "name": "Sonata n41 2mov XVI26.mid",
+            "scale": "major",
+            "key": "A",
+            "duration": 170.634088625,
+            "bpm": 135.000135000135,
+            "author": "Haydn"
+        },
+        {
+            "name": "Sonata n41 3mov XVI26.mid",
+            "scale": "major",
+            "key": "A",
+            "duration": 44.96870503125,
+            "bpm": 140.00014000014,
+            "author": "Haydn"
+        },
+        {
+            "name": "Sonata n42 1mov XVI27.mid",
+            "scale": "major",
+            "key": "G",
+            "duration": 288.6927083333333,
+            "bpm": 120,
+            "author": "Haydn"
+        },
+        {
+            "name": "Sonata n42 2mov XVI27.mid",
+            "scale": "major",
+            "key": "G",
+            "duration": 304.58142618749997,
+            "bpm": 130.00013000013,
+            "author": "Haydn"
+        },
+        {
+            "name": "Sonata n42 3mov XVI27.mid",
+            "scale": "major",
+            "key": "G",
+            "duration": 169.09765625,
+            "bpm": 160,
+            "author": "Haydn"
+        },
+        {
+            "name": "Sonata n44 1mov XVI29.mid",
+            "scale": "major",
+            "key": "F",
+            "duration": 481.9509109375,
+            "bpm": 72.00005850005513,
+            "author": "Haydn"
+        },
+        {
+            "name": "Sonata n44 3mov XVI29.mid",
+            "scale": "major",
+            "key": "F",
+            "duration": 247.96354166666666,
+            "bpm": 120,
+            "author": "Haydn"
+        },
+        {
+            "name": "Sonata n48 1mov XVI35.mid",
+            "scale": "major",
+            "key": "C",
+            "duration": 182.845531,
+            "bpm": 135.78951052635261,
+            "author": "Haydn"
+        },
+        {
+            "name": "Sonata n48 3mov XVI35.mid",
+            "scale": "major",
+            "key": "C",
+            "duration": 364.374991,
+            "bpm": 136.66670666670666,
+            "author": "Haydn"
+        },
+        {
+            "name": "Sonata n49 1mov XVI36.mid",
+            "scale": "major",
+            "key": "E",
+            "duration": 505.19144401041666,
+            "bpm": 76.11113436112157,
+            "author": "Haydn"
+        },
+        {
+            "name": "Sonata n49 2mov XVI36.mid",
+            "scale": "major",
+            "key": "A",
+            "duration": 206.27190649999997,
+            "bpm": 91.33337615561408,
+            "author": "Haydn"
+        },
+        {
+            "name": "Sonata n49 3mov XVI36.mid",
+            "scale": "major",
+            "key": "E",
+            "duration": 221.93281378125002,
+            "bpm": 140.00014000014,
+            "author": "Haydn"
+        },
+        {
+            "name": "Sonata n52 1mov XVI39.mid",
+            "scale": "major",
+            "key": "G",
+            "duration": 253.68129251041668,
+            "bpm": 82.00003553334874,
+            "author": "Haydn"
+        },
+        {
+            "name": "Sonata n52 2mov XVI39.mid",
+            "scale": "major",
+            "key": "C",
+            "duration": 307.212497,
+            "bpm": 49.16668354168214,
+            "author": "Haydn"
+        },
+        {
+            "name": "Sonata n52 3mov XVI39.mid",
+            "scale": "major",
+            "key": "G",
+            "duration": 289.75416666666666,
+            "bpm": 150,
+            "author": "Haydn"
+        },
+        {
+            "name": "Sonata n54 1mov XVI40.mid",
+            "scale": "major",
+            "key": "G",
+            "duration": 394.08975645833294,
+            "bpm": 92.93653086046818,
+            "author": "Haydn"
+        },
+        {
+            "name": "Sonata n54 2mov XVI40.mid",
+            "scale": "major",
+            "key": "G",
+            "duration": 179.2938424166667,
+            "bpm": 158.68646971762334,
+            "author": "Haydn"
+        },
+        {
+            "name": "Sonata n58 1mov XVI48.mid",
+            "scale": "major",
+            "key": "C",
+            "duration": 500.1552401875001,
+            "bpm": 54.00002126668227,
+            "author": "Haydn"
+        },
+        {
+            "name": "Sonata n58 2mov XVI48.mid",
+            "scale": "major",
+            "key": "C",
+            "duration": 236.3708333333334,
+            "bpm": 102,
+            "author": "Haydn"
+        },
+        {
+            "name": "Sonata n59 1mov XVI49.mid",
+            "scale": "major",
+            "key": "Eb",
+            "duration": 604.6144806249999,
+            "bpm": 112.43596038467611,
+            "author": "Haydn"
+        },
+        {
+            "name": "Sonata n59 3mov XVI49.mid",
+            "scale": "major",
+            "key": "Eb",
+            "duration": 227.4434765,
+            "bpm": 256.6667566667567,
+            "author": "Haydn"
+        },
+        {
+            "name": "Sonata No.7.mid",
+            "scale": "major",
+            "key": "C",
+            "duration": 578.1613662,
+            "bpm": 105.66658492229051,
+            "author": "Haydn"
+        },
+        {
+            "name": "Symphony n101 1mov ''Clock''.mid",
+            "scale": "major",
+            "key": "F",
+            "duration": 452.3324725,
+            "bpm": 163.33370833427082,
+            "author": "Haydn"
+        },
+        {
+            "name": "Symphony n101 2mov ''Clock''.mid",
+            "scale": "major",
+            "key": "G",
+            "duration": 446.09999999999997,
+            "bpm": 50,
+            "author": "Haydn"
+        },
+        {
+            "name": "Symphony n101 3mov ''Clock''.mid",
+            "scale": "major",
+            "key": "D",
+            "duration": 443.1,
+            "bpm": 150,
+            "author": "Haydn"
+        },
+        {
+            "name": "Symphony n101 4mov ''Clock''.mid",
+            "scale": "major",
+            "key": "D",
+            "duration": 269.61717074999996,
+            "bpm": 275.0010312538672,
+            "author": "Haydn"
+        },
+        {
+            "name": "Symphony n104 1mov ''London''.mid",
+            "scale": "major",
+            "key": "F",
+            "duration": 499.36602500000004,
+            "bpm": 137.5000072916697,
+            "author": "Haydn"
+        },
+        {
+            "name": "Symphony n104 2mov ''London''.mid",
+            "scale": "major",
+            "key": "G",
+            "duration": 449.4807105000001,
+            "bpm": 48.00000462222283,
+            "author": "Haydn"
+        },
+        {
+            "name": "Symphony n104 3mov ''London''.mid",
+            "scale": "major",
+            "key": "D",
+            "duration": 274.35429,
+            "bpm": 155.00031000062,
+            "author": "Haydn"
+        },
+        {
+            "name": "Symphony n104 4mov ''London''.mid",
+            "scale": "major",
+            "key": "D",
+            "duration": 403.4995965,
+            "bpm": 270.00027000027,
+            "author": "Haydn"
+        },
+        {
+            "name": "Symphony n28 1mov.mid",
+            "scale": "major",
+            "key": "A",
+            "duration": 327.5422498833333,
+            "bpm": 159.16674979176204,
+            "author": "Haydn"
+        },
+        {
+            "name": "Symphony n45 1mov ''Farewell''.mid",
+            "duration": 213.00133517500012,
+            "bpm": 206.22798206423806,
+            "author": "Haydn"
+        },
+        {
+            "name": "Symphony n45 4mov ''Farewell''.mid",
+            "scale": "major",
+            "key": "A",
+            "duration": 456.2342944888889,
+            "bpm": 143.49999568333433,
+            "author": "Haydn"
+        },
+        {
+            "name": "Symphony n55 1mov ''Der Schulmeister''.mid",
+            "scale": "major",
+            "key": "Eb",
+            "duration": 482.7604715104168,
+            "bpm": 154.07957707250347,
+            "author": "Haydn"
+        },
+        {
+            "name": "Symphony n55 2mov ''Der Schulmeister''.mid",
+            "scale": "major",
+            "key": "Bb",
+            "duration": 406.65829617708334,
+            "bpm": 47.76924585257147,
+            "author": "Haydn"
+        },
+        {
+            "name": "Symphony n55 3mov ''Der Schulmeister''.mid",
+            "scale": "major",
+            "key": "Eb",
+            "duration": 259.6545562291667,
+            "bpm": 119.94605516524011,
+            "author": "Haydn"
+        },
+        {
+            "name": "Symphony n55 4mov ''Der Schulmeister''.mid",
+            "scale": "major",
+            "key": "Eb",
+            "duration": 249.9956300312498,
+            "bpm": 116.63276998620549,
+            "author": "Haydn"
+        },
+        {
+            "name": "Symphony n70 1mov.mid",
+            "scale": "major",
+            "key": "D",
+            "duration": 284.2830825,
+            "bpm": 229.99961666730556,
+            "author": "Haydn"
+        },
+        {
+            "name": "Symphony n76 1mov.mid",
+            "scale": "major",
+            "key": "Eb",
+            "duration": 342.4151233333334,
+            "bpm": 137.7701185899198,
+            "author": "Haydn"
+        },
+        {
+            "name": "Symphony n76 2mov.mid",
+            "scale": "major",
+            "key": "Bb",
+            "duration": 413.88584736458273,
+            "bpm": 41.37037140171413,
+            "author": "Haydn"
+        },
+        {
+            "name": "Symphony n76 3mov.mid",
+            "scale": "major",
+            "key": "Eb",
+            "duration": 192.4458069375,
+            "bpm": 151.17235106371587,
+            "author": "Haydn"
+        },
+        {
+            "name": "Symphony n76 4mov.mid",
+            "scale": "major",
+            "key": "Eb",
+            "duration": 344.2832081354164,
+            "bpm": 155.69157811273044,
+            "author": "Haydn"
+        },
+        {
+            "name": "Symphony n85 ''La reine''.mid",
+            "scale": "major",
+            "key": "Bb",
+            "duration": 1209.5604316520833,
+            "bpm": 134.01783924092837,
+            "author": "Haydn"
+        },
+        {
+            "name": "Symphony n88 1mov.mid",
+            "duration": 516.17096075,
+            "bpm": 94.19993601005338,
+            "author": "Haydn"
+        },
+        {
+            "name": "Symphony n88 2mov.mid",
+            "scale": "major",
+            "key": "D",
+            "duration": 284.78738699999997,
+            "bpm": 49.00000960000384,
+            "author": "Haydn"
+        },
+        {
+            "name": "Symphony n88 3mov.mid",
+            "duration": 252.4265504,
+            "bpm": 118.66667706357714,
+            "author": "Haydn"
+        },
+        {
+            "name": "Symphony n88 4mov.mid",
+            "scale": "major",
+            "key": "C",
+            "duration": 213.19424316666667,
+            "bpm": 141.07700981292928,
+            "author": "Haydn"
+        },
+        {
+            "name": "Symphony n90 1mov.mid",
+            "duration": 530.97442725,
+            "bpm": 125.00000152777791,
+            "author": "Haydn"
+        },
+        {
+            "name": "Symphony n90 3mov.mid",
+            "duration": 297.32113125000006,
+            "bpm": 140.00014000014,
+            "author": "Haydn"
+        },
+        {
+            "name": "Symphony n90 4mov.mid",
+            "duration": 414.74958525000005,
+            "bpm": 140.00014000014,
+            "author": "Haydn"
+        },
+        {
+            "name": "Symphony n94 1mov ''Surprise''.mid",
+            "scale": "major",
+            "key": "G",
+            "duration": 516.1069194479178,
+            "bpm": 127.88558312511496,
+            "author": "Haydn"
+        },
+        {
+            "name": "Symphony n94 2mov ''Surprise''.mid",
+            "scale": "major",
+            "key": "C",
+            "duration": 355.23441071875055,
+            "bpm": 62.42509235398434,
+            "author": "Haydn"
+        },
+        {
+            "name": "Symphony n94 3mov ''Surprise''.mid",
+            "scale": "major",
+            "key": "G",
+            "duration": 251.24261247395845,
+            "bpm": 182.58577307027306,
+            "author": "Haydn"
+        },
+        {
+            "name": "Symphony n94 4mov ''Surprise''.mid",
+            "scale": "major",
+            "key": "G",
+            "duration": 234.62612499479144,
+            "bpm": 136.29735393385238,
+            "author": "Haydn"
+        },
+        {
+            "name": "Symphony n96 1mov ''Miracle''.mid",
+            "scale": "major",
+            "key": "D",
+            "duration": 403.1596456666667,
+            "bpm": 49.473712987743944,
+            "author": "Haydn"
+        },
+        {
+            "name": "Symphony n96 2mov ''Miracle''.mid",
+            "scale": "major",
+            "key": "G",
+            "duration": 340.3125,
+            "bpm": 48,
+            "author": "Haydn"
+        },
+        {
+            "name": "Symphony n96 3mov ''Miracle''.mid",
+            "scale": "major",
+            "key": "D",
+            "duration": 274.65510375,
+            "bpm": 145.00003625000906,
+            "author": "Haydn"
+        },
+        {
+            "name": "Symphony n96 4mov ''Miracle''.mid",
+            "scale": "major",
+            "key": "D",
+            "duration": 205.67636775,
+            "bpm": 170.0000850000425,
+            "author": "Haydn"
+        }
+    ],
+    "Heidrich": [
+        {
+            "name": "Auf der See fu_r Harmonium und Klavier Op 21.2.mid",
+            "scale": "major",
+            "key": "G",
+            "duration": 321.55308337499974,
+            "bpm": 89.80562178215054,
+            "author": "Heidrich"
+        },
+        {
+            "name": "Elegie (Fantasiestu_ck fu_r Harmonium und Klavier)Op. 21 No 1.mid",
+            "scale": "major",
+            "key": "C",
+            "duration": 281.4881743333334,
+            "bpm": 77.37944550211883,
+            "author": "Heidrich"
+        }
+    ],
+    "Holst": [
+        {
+            "name": "Song Without Words - I'll love my love.mid",
+            "scale": "major",
+            "key": "Ab",
+            "duration": 155.11598950000007,
+            "bpm": 52.731705289840434,
+            "author": "Holst"
+        }
+    ],
+    "Liszt": [
+        {
+            "name": "2nd Hungarian Rhapsody.mid",
+            "scale": "major",
+            "key": "F#",
+            "duration": 464.3067073125,
+            "bpm": 109.51670449441812,
+            "author": "Liszt"
+        },
+        {
+            "name": "Liszt Hungarian Rhapsody n2.MID",
+            "scale": "major",
+            "key": "C",
+            "duration": 80.78210919791668,
+            "bpm": 175.00007291669704,
+            "author": "Liszt"
+        },
+        {
+            "name": "Lizt Piano Concerto n1 S124.mid",
+            "scale": "major",
+            "key": "Eb",
+            "duration": 1026.009101536464,
+            "bpm": 107.53138600855499,
+            "author": "Liszt"
+        }
+    ],
+    "Mozart": [
+        {
+            "name": "K299 Flute Harp Concerto 1mov.mid",
+            "scale": "major",
+            "key": "C",
+            "duration": 554.6376340729169,
+            "bpm": 72.15385291860187,
+            "author": "Mozart"
+        },
+        {
+            "name": "K299 Flute Harp Concerto 2mov.mid",
+            "scale": "major",
+            "key": "C",
+            "duration": 451.2745392395833,
+            "bpm": 37.00000290052168,
+            "author": "Mozart"
+        },
+        {
+            "name": "K299 Flute Harp Concerto 3mov.mid",
+            "scale": "major",
+            "key": "C",
+            "duration": 626.3713658333335,
+            "bpm": 127.6666957299114,
+            "author": "Mozart"
+        },
+        {
+            "name": "K314 Flute Concerto n2 1mov.mid",
+            "scale": "major",
+            "key": "D",
+            "duration": 469.8811640937496,
+            "bpm": 100.01783638008101,
+            "author": "Mozart"
+        },
+        {
+            "name": "K314 Flute Concerto n2 2mov.mid",
+            "scale": "major",
+            "key": "G",
+            "duration": 421.5836003437499,
+            "bpm": 48.65824837047833,
+            "author": "Mozart"
+        },
+        {
+            "name": "K314 Flute Concerto n2 3mov.mid",
+            "scale": "major",
+            "key": "D",
+            "duration": 335.2467842239585,
+            "bpm": 95.94373615649958,
+            "author": "Mozart"
+        },
+        {
+            "name": "K495 Horn Concerto n4 1mov.mid",
+            "scale": "major",
+            "key": "Eb",
+            "duration": 402.2444404375001,
+            "bpm": 97.00009955571399,
+            "author": "Mozart"
+        },
+        {
+            "name": "K495 Horn Concerto n4 2mov.mid",
+            "scale": "major",
+            "key": "Bb",
+            "duration": 243.541423125,
+            "bpm": 66.000066000066,
+            "author": "Mozart"
+        },
+        {
+            "name": "K495 Horn Concerto n4 3mov.mid",
+            "scale": "major",
+            "key": "Eb",
+            "duration": 191.4915157604167,
+            "bpm": 108.83343541242601,
+            "author": "Mozart"
+        },
+        {
+            "name": "K525 Serenade 1mov ''Eine Kleine Natchmusik''.mid",
+            "scale": "major",
+            "key": "C",
+            "duration": 343.1054874000001,
+            "bpm": 132.15667161816123,
+            "author": "Mozart"
+        },
+        {
+            "name": "K525 Serenade 2mov ''Eine Kleine Natchmusik''.mid",
+            "scale": "major",
+            "key": "C",
+            "duration": 347.86689149999995,
+            "bpm": 64.25373350746646,
+            "author": "Mozart"
+        },
+        {
+            "name": "K525 Serenade 3mov ''Eine Kleine Natchmusik''.mid",
+            "scale": "major",
+            "key": "C",
+            "duration": 133.22247199999995,
+            "bpm": 120.25925318831072,
+            "author": "Mozart"
+        },
+        {
+            "name": "K525 Serenade 4mov ''Eine Kleine Natchmusik''.mid",
+            "scale": "major",
+            "key": "C",
+            "duration": 237.01274920000003,
+            "bpm": 234.23420173392418,
+            "author": "Mozart"
+        },
+        {
+            "name": "K620 Overture The Magic Flute.mid",
+            "scale": "major",
+            "key": "F",
+            "duration": 139.32499394166666,
+            "bpm": 142.00014501275197,
+            "author": "Mozart"
+        },
+        {
+            "name": "K622 Clarinet Concerto 1mov.mid",
+            "scale": "major",
+            "key": "A",
+            "duration": 722.0291666666667,
+            "bpm": 120,
+            "author": "Mozart"
+        },
+        {
+            "name": "K622 Clarinet Concerto 2mov.mid",
+            "scale": "major",
+            "key": "D",
+            "duration": 355.72916666666663,
+            "bpm": 85,
+            "author": "Mozart"
+        },
+        {
+            "name": "K622 Clarinet Concerto 3mov.mid",
+            "scale": "major",
+            "key": "A",
+            "duration": 530.352777425,
+            "bpm": 150.00009000008998,
+            "author": "Mozart"
+        },
+        {
+            "name": "K626 Requiem 01 Introitus & Kyrie.mid",
+            "scale": "major",
+            "key": "F",
+            "duration": 353.19009,
+            "bpm": 52.499984722234956,
+            "author": "Mozart"
+        },
+        {
+            "name": "K626 Requiem 02 rextremendae.mid",
+            "scale": "major",
+            "key": "Bb",
+            "duration": 104.38999999999999,
+            "bpm": 50,
+            "author": "Mozart"
+        },
+        {
+            "name": "K626 Requiem 03 tuba mirum.mid",
+            "scale": "major",
+            "key": "Bb",
+            "duration": 230.2074657,
+            "bpm": 54.28576142861857,
+            "author": "Mozart"
+        },
+        {
+            "name": "K626 Requiem 04 Dies Irae.mid",
+            "scale": "major",
+            "key": "C",
+            "duration": 111.08307227083334,
+            "bpm": 151.0033163560546,
+            "author": "Mozart"
+        },
+        {
+            "name": "K626 Requiem 05 Recordare.mid",
+            "scale": "major",
+            "key": "F",
+            "duration": 359.06926069166667,
+            "bpm": 67.49999145833453,
+            "author": "Mozart"
+        },
+        {
+            "name": "K626 Requiem 06 confutatis.mid",
+            "scale": "major",
+            "key": "C",
+            "duration": 148.65086644583332,
+            "bpm": 45.00000008333408,
+            "author": "Mozart"
+        },
+        {
+            "name": "K626 Requiem 07 Lacrimosa.mid",
+            "scale": "major",
+            "key": "F",
+            "duration": 166.20770615833334,
+            "bpm": 92.49999729166689,
+            "author": "Mozart"
+        },
+        {
+            "name": "K626 Requiem 08 offertorio domine jesu.mid",
+            "scale": "major",
+            "key": "Bb",
+            "duration": 249.59333333333336,
+            "bpm": 77.5,
+            "author": "Mozart"
+        },
+        {
+            "name": "K626 Requiem 09 hostias.mid",
+            "scale": "major",
+            "key": "Eb",
+            "duration": 262.6854933333333,
+            "bpm": 65.00001625001624,
+            "author": "Mozart"
+        },
+        {
+            "name": "K626 Requiem 10 Sanctus.mid",
+            "scale": "major",
+            "key": "D",
+            "duration": 88.99791666666667,
+            "bpm": 96.66666666666667,
+            "author": "Mozart"
+        },
+        {
+            "name": "K626 Requiem 11 Benedictus.mid",
+            "scale": "major",
+            "key": "Bb",
+            "duration": 287.8979166666667,
+            "bpm": 96.66666666666667,
+            "author": "Mozart"
+        },
+        {
+            "name": "K626 Requiem 12 agnus dei.mid",
+            "scale": "major",
+            "key": "F",
+            "duration": 410.380066,
+            "bpm": 49.28573928573928,
+            "author": "Mozart"
+        },
+        {
+            "name": "K626 Requiem kyrie.mid",
+            "scale": "major",
+            "key": "C",
+            "duration": 143.93350633333333,
+            "bpm": 46.28000010133459,
+            "author": "Mozart"
+        },
+        {
+            "name": "Piano Concerto n20 K466 1mov.mid",
+            "duration": 871.2837242333331,
+            "bpm": 122.19149988877687,
+            "author": "Mozart"
+        },
+        {
+            "name": "Piano Concerto n20 K466 2mov.mid",
+            "duration": 560.7743175333334,
+            "bpm": 66.69739665638568,
+            "author": "Mozart"
+        },
+        {
+            "name": "Piano Concerto n20 K466 3mov.mid",
+            "duration": 477.9481275999996,
+            "bpm": 216.97549203522226,
+            "author": "Mozart"
+        },
+        {
+            "name": "Piano Concerto n21 K467 1mov ''Elvira Madigan''.mid",
+            "duration": 886.2822842666665,
+            "bpm": 119.71115918599438,
+            "author": "Mozart"
+        },
+        {
+            "name": "Piano Concerto n21 K467 2mov ''Elvira Madigan''.mid",
+            "duration": 421.12215566666663,
+            "bpm": 53.894751800009175,
+            "author": "Mozart"
+        },
+        {
+            "name": "Piano Concerto n21 K467 3mov ''Elvira Madigan''.mid",
+            "duration": 404.66853280000015,
+            "bpm": 139.33339628010393,
+            "author": "Mozart"
+        },
+        {
+            "name": "Piano Concerto n7 for 3 Pianos K242 1mov ''Lodron''.mid",
+            "scale": "major",
+            "key": "F",
+            "duration": 552.6667060625002,
+            "bpm": 124.82610846510967,
+            "author": "Mozart"
+        },
+        {
+            "name": "Piano Concerto n7 for 3 Pianos K242 2mov ''Lodron''.mid",
+            "scale": "major",
+            "key": "Bb",
+            "duration": 500.93634622916676,
+            "bpm": 38.577585080292735,
+            "author": "Mozart"
+        },
+        {
+            "name": "Piano Concerto n7 for 3 Pianos K242 3mov ''Lodron''.mid",
+            "scale": "major",
+            "key": "F",
+            "duration": 336.3087290458329,
+            "bpm": 133.38017891210762,
+            "author": "Mozart"
+        },
+        {
+            "name": "Symphony n22 K162 1mov.mid",
+            "scale": "major",
+            "key": "C",
+            "duration": 217.8,
+            "bpm": 120,
+            "author": "Mozart"
+        },
+        {
+            "name": "Symphony n22 K162 3mov.mid",
+            "scale": "major",
+            "key": "C",
+            "duration": 83.03999999999999,
+            "bpm": 250,
+            "author": "Mozart"
+        },
+        {
+            "name": "Symphony n25 K183 1mov.mid",
+            "scale": "major",
+            "key": "C",
+            "duration": 477.7114563999997,
+            "bpm": 145.59523099034317,
+            "author": "Mozart"
+        },
+        {
+            "name": "Symphony n25 K183 2mov.mid",
+            "scale": "major",
+            "key": "C",
+            "duration": 297.130565,
+            "bpm": 37.49999714444582,
+            "author": "Mozart"
+        },
+        {
+            "name": "Symphony n25 K183 3mov.mid",
+            "scale": "major",
+            "key": "C",
+            "duration": 220.41200440000003,
+            "bpm": 121.67441641787268,
+            "author": "Mozart"
+        },
+        {
+            "name": "Symphony n25 K183 4mov.mid",
+            "scale": "major",
+            "key": "C",
+            "duration": 331.68942699999997,
+            "bpm": 186.34884030010383,
+            "author": "Mozart"
+        },
+        {
+            "name": "Symphony n28 K200 1mov.mid",
+            "scale": "major",
+            "key": "C",
+            "duration": 299.4861180166665,
+            "bpm": 124.25000529214337,
+            "author": "Mozart"
+        },
+        {
+            "name": "Symphony n28 K200 2mov.mid",
+            "scale": "major",
+            "key": "F",
+            "duration": 303.3262675583333,
+            "bpm": 28.66667146666859,
+            "author": "Mozart"
+        },
+        {
+            "name": "Symphony n28 K200 3mov.mid",
+            "scale": "major",
+            "key": "C",
+            "duration": 232.04455388749994,
+            "bpm": 115.07418389396817,
+            "author": "Mozart"
+        },
+        {
+            "name": "Symphony n28 K200 4mov.mid",
+            "scale": "major",
+            "key": "C",
+            "duration": 250.22369791666665,
+            "bpm": 168.4,
+            "author": "Mozart"
+        },
+        {
+            "name": "Symphony n29 K201 1mov.mid",
+            "scale": "major",
+            "key": "A",
+            "duration": 432.2776485249998,
+            "bpm": 152.53622421763401,
+            "author": "Mozart"
+        },
+        {
+            "name": "Symphony n29 K201 2mov.mid",
+            "scale": "major",
+            "key": "D",
+            "duration": 440.88629076666683,
+            "bpm": 39.39977707439842,
+            "author": "Mozart"
+        },
+        {
+            "name": "Symphony n29 K201 4mov.mid",
+            "duration": 282.46942379999996,
+            "bpm": 158.2728536228803,
+            "author": "Mozart"
+        },
+        {
+            "name": "Symphony n30 K202 1mov.mid",
+            "duration": 347.78584961666655,
+            "bpm": 139.27605814487342,
+            "author": "Mozart"
+        },
+        {
+            "name": "Symphony n30 K202 2mov.mid",
+            "duration": 238.82688299999995,
+            "bpm": 51.208347186116384,
+            "author": "Mozart"
+        },
+        {
+            "name": "Symphony n30 K202 3mov.mid",
+            "scale": "major",
+            "key": "C",
+            "duration": 255.02519796666672,
+            "bpm": 107.53214927869178,
+            "author": "Mozart"
+        },
+        {
+            "name": "Symphony n30 K202 4mov.mid",
+            "scale": "major",
+            "key": "C",
+            "duration": 208.82119454999997,
+            "bpm": 165.000019164355,
+            "author": "Mozart"
+        },
+        {
+            "name": "Symphony n31 K297 1mov ''Paris''.mid",
+            "duration": 417.49582166666676,
+            "bpm": 167.72038318505852,
+            "author": "Mozart"
+        },
+        {
+            "name": "Symphony n31 K297 2mov ''Paris''.mid",
+            "duration": 353.9508542,
+            "bpm": 49.074066956174676,
+            "author": "Mozart"
+        },
+        {
+            "name": "Symphony n31 K297 3mov ''Paris''.mid",
+            "duration": 220.60651599999997,
+            "bpm": 254.4682365392535,
+            "author": "Mozart"
+        },
+        {
+            "name": "Symphony n33 K319 1mov.mid",
+            "duration": 403.2825791999998,
+            "bpm": 163.01727753715693,
+            "author": "Mozart"
+        },
+        {
+            "name": "Symphony n33 K319 2mov.mid",
+            "duration": 302.2017945,
+            "bpm": 38.04255172553335,
+            "author": "Mozart"
+        },
+        {
+            "name": "Symphony n33 K319 3mov.mid",
+            "duration": 180.98497200000003,
+            "bpm": 125.16675017786143,
+            "author": "Mozart"
+        },
+        {
+            "name": "Symphony n33 K319 4mov.mid",
+            "duration": 384.3416126000001,
+            "bpm": 160.65221832329837,
+            "author": "Mozart"
+        },
+        {
+            "name": "Symphony n34 K338 1mov.mid",
+            "scale": "major",
+            "key": "C",
+            "duration": 421.4938163437491,
+            "bpm": 144.88426455951642,
+            "author": "Mozart"
+        },
+        {
+            "name": "Symphony n34 K338 2mov.mid",
+            "scale": "major",
+            "key": "F",
+            "duration": 429.8327745208333,
+            "bpm": 47.79664708149749,
+            "author": "Mozart"
+        },
+        {
+            "name": "Symphony n34 K338 3mov.mid",
+            "scale": "major",
+            "key": "C",
+            "duration": 312.61420710416587,
+            "bpm": 123.55065967997268,
+            "author": "Mozart"
+        },
+        {
+            "name": "Symphony n35 K385 1mov ''Haffner''.mid",
+            "scale": "major",
+            "key": "D",
+            "duration": 355.4351025,
+            "bpm": 137.99987580011177,
+            "author": "Mozart"
+        },
+        {
+            "name": "Symphony n35 K385 2mov ''Haffner''.mid",
+            "scale": "major",
+            "key": "G",
+            "duration": 493.6150119166666,
+            "bpm": 54.30433045145533,
+            "author": "Mozart"
+        },
+        {
+            "name": "Symphony n35 K385 3mov ''Haffner''.mid",
+            "scale": "major",
+            "key": "D",
+            "duration": 218.230848625,
+            "bpm": 102.25002680003243,
+            "author": "Mozart"
+        },
+        {
+            "name": "Symphony n35 K385 4mov ''Haffner''.mid",
+            "scale": "major",
+            "key": "D",
+            "duration": 209.4474990208333,
+            "bpm": 111.74993827920545,
+            "author": "Mozart"
+        },
+        {
+            "name": "Symphony n36 K425 1mov ''Linz''.mid",
+            "duration": 606.5100200000005,
+            "bpm": 164.52600360940602,
+            "author": "Mozart"
+        },
+        {
+            "name": "Symphony n36 K425 2mov ''Linz''.mid",
+            "duration": 448.47479617500005,
+            "bpm": 42.89287164643657,
+            "author": "Mozart"
+        },
+        {
+            "name": "Symphony n36 K425 3mov ''Linz''.mid",
+            "duration": 204.11836000000005,
+            "bpm": 127.32005687572764,
+            "author": "Mozart"
+        },
+        {
+            "name": "Symphony n36 K425 4mov ''Linz''.mid",
+            "duration": 438.8506781333336,
+            "bpm": 154.46988577891338,
+            "author": "Mozart"
+        },
+        {
+            "name": "Symphony n37 K444 1mov.mid",
+            "scale": "major",
+            "key": "G",
+            "duration": 100.49168566666665,
+            "bpm": 33.99999520000097,
+            "author": "Mozart"
+        },
+        {
+            "name": "Symphony n38 K504 1mov ''Prague''.mid",
+            "scale": "major",
+            "key": "D",
+            "duration": 710.6600678666664,
+            "bpm": 140.86585810565947,
+            "author": "Mozart"
+        },
+        {
+            "name": "Symphony n38 K504 2mov ''Prague''.mid",
+            "scale": "major",
+            "key": "G",
+            "duration": 622.812343525,
+            "bpm": 49.00530749315891,
+            "author": "Mozart"
+        },
+        {
+            "name": "Symphony n38 K504 3mov ''Prague''.mid",
+            "scale": "major",
+            "key": "D",
+            "duration": 223.4645665833332,
+            "bpm": 153.6725980673845,
+            "author": "Mozart"
+        },
+        {
+            "name": "Symphony n39 K543 1mov.mid",
+            "duration": 645.9758230166664,
+            "bpm": 133.30017861696558,
+            "author": "Mozart"
+        },
+        {
+            "name": "Symphony n39 K543 2mov.mid",
+            "duration": 481.28719980000045,
+            "bpm": 46.419045650477436,
+            "author": "Mozart"
+        },
+        {
+            "name": "Symphony n39 K543 3mov.mid",
+            "duration": 245.17397179999995,
+            "bpm": 130.80008824050722,
+            "author": "Mozart"
+        },
+        {
+            "name": "Symphony n39 K543 4mov.mid",
+            "duration": 338.28280240000004,
+            "bpm": 129.5001290043286,
+            "author": "Mozart"
+        },
+        {
+            "name": "Symphony n4 K019 1mov.mid",
+            "scale": "major",
+            "key": "D",
+            "duration": 267.01850300000007,
+            "bpm": 138.50010196675157,
+            "author": "Mozart"
+        },
+        {
+            "name": "Symphony n4 K19 3mov.mid",
+            "scale": "major",
+            "key": "D",
+            "duration": 110.7,
+            "bpm": 120,
+            "author": "Mozart"
+        },
+        {
+            "name": "Symphony n40 K550 1mov.mid",
+            "duration": 462.70122899999996,
+            "bpm": 190.80003260827013,
+            "author": "Mozart"
+        },
+        {
+            "name": "Symphony n40 K550 2mov.mid",
+            "duration": 480.57757200000003,
+            "bpm": 44.50000059305754,
+            "author": "Mozart"
+        },
+        {
+            "name": "Symphony n40 K550 3mov.mid",
+            "duration": 287.0466508,
+            "bpm": 128.43248317326365,
+            "author": "Mozart"
+        },
+        {
+            "name": "Symphony n40 K550 4mov.mid",
+            "duration": 385.33212600000024,
+            "bpm": 253.94008086764828,
+            "author": "Mozart"
+        },
+        {
+            "name": "Symphony n41 K551 1mov ''Jupiter''.mid",
+            "scale": "major",
+            "key": "C",
+            "duration": 698.2139860000001,
+            "bpm": 128.00000766670794,
+            "author": "Mozart"
+        },
+        {
+            "name": "Symphony n41 K551 2mov ''Jupiter''.mid",
+            "scale": "major",
+            "key": "F",
+            "duration": 461.5410613499999,
+            "bpm": 37.70731432479826,
+            "author": "Mozart"
+        },
+        {
+            "name": "Symphony n41 K551 3mov ''Jupiter''.mid",
+            "scale": "major",
+            "key": "C",
+            "duration": 152.09539239166665,
+            "bpm": 125.19130675336447,
+            "author": "Mozart"
+        },
+        {
+            "name": "Symphony n41 K551 4mov ''Jupiter''.mid",
+            "scale": "major",
+            "key": "C",
+            "duration": 516.8699915499999,
+            "bpm": 64.42978573198009,
+            "author": "Mozart"
+        },
+        {
+            "name": "Symphony n5 K022.mid",
+            "scale": "major",
+            "key": "Bb",
+            "duration": 447.4479178854167,
+            "bpm": 53.29998991000755,
+            "author": "Mozart"
+        }
+    ],
+    "Paganini": [
+        {
+            "name": "Violin Concert n2.mid",
+            "scale": "minor",
+            "key": "D",
+            "duration": 223.12280066666688,
+            "bpm": 93.79582713072175,
+            "author": "Paganini"
+        },
+        {
+            "name": "Witches Dance.mid",
+            "scale": "major",
+            "key": "D",
+            "duration": 426.26771436666667,
+            "bpm": 56.99997720000912,
+            "author": "Paganini"
+        }
+    ],
+    "Rachmaninov": [
+        {
+            "name": "Concerto n3 2&3movs.mid",
+            "scale": "major",
+            "key": "C",
+            "duration": 1344.944445175,
+            "bpm": 109.6535482262531,
+            "author": "Rachmaninov"
+        }
+    ],
+    "Ravel": [
+        {
+            "name": "Cinq Melodies Populaires Greaques No.1.mid",
+            "scale": "major",
+            "key": "Bb",
+            "duration": 81.48412317499998,
+            "bpm": 65.63157274228594,
+            "author": "Ravel"
+        },
+        {
+            "name": "Cinq Melodies Populaires Greaques No.2.mid",
+            "scale": "major",
+            "key": "B",
+            "duration": 51.15991282500001,
+            "bpm": 57.6163520875302,
+            "author": "Ravel"
+        },
+        {
+            "name": "Cinq Melodies Populaires Greaques No.3.mid",
+            "scale": "major",
+            "key": "G",
+            "duration": 39.385073891666664,
+            "bpm": 68.86028847693895,
+            "author": "Ravel"
+        },
+        {
+            "name": "Cinq Melodies Populaires Greaques No.4.mid",
+            "scale": "major",
+            "key": "A",
+            "duration": 107.42094775833331,
+            "bpm": 51.50234470297585,
+            "author": "Ravel"
+        },
+        {
+            "name": "Cinq Melodies Populaires Greaques No.5.mid",
+            "scale": "major",
+            "key": "Ab",
+            "duration": 61.358471466666686,
+            "bpm": 77.51999709020737,
+            "author": "Ravel"
+        },
+        {
+            "name": "Toccato for piano.mid",
+            "duration": 224.3442201,
+            "bpm": 135.000135000135,
+            "author": "Ravel"
+        }
+    ],
+    "Reinecke": [
+        {
+            "name": "Reinecke Piano Concerto n3 1mov.mid",
+            "scale": "major",
+            "key": "C",
+            "duration": 936.7956892833308,
+            "bpm": 113.24730476265293,
+            "author": "Reinecke"
+        },
+        {
+            "name": "Reinecke Piano Concerto n3 2mov.mid",
+            "scale": "major",
+            "key": "Ab",
+            "duration": 512.165927088889,
+            "bpm": 23.204743758744463,
+            "author": "Reinecke"
+        },
+        {
+            "name": "Reinecke Piano Concerto n3 3mov.mid",
+            "scale": "major",
+            "key": "C",
+            "duration": 553.7601630999999,
+            "bpm": 144.98678501897163,
+            "author": "Reinecke"
+        }
+    ],
+    "Rimsky-Korsakov": [
+        {
+            "name": "Aria of Sadko.mid",
+            "scale": "major",
+            "key": "C",
+            "duration": 109.15769399999999,
+            "bpm": 53.99999783333351,
+            "author": "Rimsky-Korsakov"
+        },
+        {
+            "name": "Rimsky Korsakov ''Flight Of the Bumblebee''.mid",
+            "scale": "major",
+            "key": "C",
+            "duration": 72.906933,
+            "bpm": 172.00010320006191,
+            "author": "Rimsky-Korsakov"
+        }
+    ],
+    "Rothchild": [
+        {
+            "name": "Rothchild Horn Concerto Rmw16 1mov.mid",
+            "scale": "major",
+            "key": "F",
+            "duration": 339.3909035208331,
+            "bpm": 93.0367203351504,
+            "author": "Rothchild"
+        },
+        {
+            "name": "Rothchild Horn Concerto Rmw16 2mov.mid",
+            "scale": "major",
+            "key": "Bb",
+            "duration": 123.63004036458335,
+            "bpm": 67.72504713879093,
+            "author": "Rothchild"
+        },
+        {
+            "name": "Rothchild Horn Concerto Rmw16 3mov.mid",
+            "scale": "major",
+            "key": "F",
+            "duration": 179.0933457656251,
+            "bpm": 147.8033209662626,
+            "author": "Rothchild"
+        },
+        {
+            "name": "Rothchild Oboe Concerto Rmw09 1mov.mid",
+            "scale": "major",
+            "key": "G",
+            "duration": 189.38448332291674,
+            "bpm": 111.33152696650708,
+            "author": "Rothchild"
+        },
+        {
+            "name": "Rothchild Oboe Concerto Rmw09 2mov.mid",
+            "scale": "minor",
+            "key": "Bb",
+            "duration": 112.32155895833333,
+            "bpm": 54.735311656381924,
+            "author": "Rothchild"
+        },
+        {
+            "name": "Rothchild Oboe Concerto Rmw09 3mov.mid",
+            "scale": "major",
+            "key": "G",
+            "duration": 130.64398768749993,
+            "bpm": 123.77918803748821,
+            "author": "Rothchild"
+        },
+        {
+            "name": "Rothchild Piano Sonata Rmw13 1mov.mid",
+            "scale": "minor",
+            "key": "F",
+            "duration": 250.3725852499999,
+            "bpm": 133.547637136636,
+            "author": "Rothchild"
+        },
+        {
+            "name": "Rothchild Piano Sonata Rmw13 2mov.mid",
+            "scale": "major",
+            "key": "F",
+            "duration": 148.1758541145833,
+            "bpm": 77.35970275647834,
+            "author": "Rothchild"
+        },
+        {
+            "name": "Rothchild Piano Sonata Rmw13 3mov.mid",
+            "scale": "major",
+            "key": "F",
+            "duration": 89.01406577083326,
+            "bpm": 112.23890545684361,
+            "author": "Rothchild"
+        },
+        {
+            "name": "Rothchild Symphony Rmw12 1mov.mid",
+            "scale": "major",
+            "key": "Eb",
+            "duration": 260.3846658645835,
+            "bpm": 120.47772510512115,
+            "author": "Rothchild"
+        },
+        {
+            "name": "Rothchild Symphony Rmw12 2mov.mid",
+            "scale": "major",
+            "key": "Bb",
+            "duration": 163.43352074999999,
+            "bpm": 65.41671227643106,
+            "author": "Rothchild"
+        },
+        {
+            "name": "Rothchlid Symphony Rmw12 3mov.mid",
+            "scale": "major",
+            "key": "Eb",
+            "duration": 134.33584740624985,
+            "bpm": 122.46586803257867,
+            "author": "Rothchild"
+        }
+    ],
+    "Saint-Saens": [
+        {
+            "name": "Le Carnaval des Animaux (1886), 1. Introduction et Marche du Lion.mid",
+            "scale": "major",
+            "key": "C",
+            "duration": 126.7769307416668,
+            "bpm": 120.60632465581524,
+            "author": "Saint-Saens"
+        },
+        {
+            "name": "Le Carnaval des Animaux (1886), 2. Poules et Coqs.mid",
+            "scale": "major",
+            "key": "C",
+            "duration": 61.99747293333333,
+            "bpm": 140.3478192901474,
+            "author": "Saint-Saens"
+        },
+        {
+            "name": "Le Carnaval des Animaux (1886), 3. Hemiones (Animaux rapides).mid",
+            "scale": "major",
+            "key": "Eb",
+            "duration": 32.236653708333314,
+            "bpm": 218.39710562028853,
+            "author": "Saint-Saens"
+        },
+        {
+            "name": "Le Carnaval des Animaux (1886), 4. Tortues.mid",
+            "scale": "major",
+            "key": "Bb",
+            "duration": 120.39809920833333,
+            "bpm": 40.380952908434516,
+            "author": "Saint-Saens"
+        },
+        {
+            "name": "Le Carnaval des Animaux (1886), 5. L'Ele'phant.mid",
+            "scale": "major",
+            "key": "Eb",
+            "duration": 80.8890209666667,
+            "bpm": 58.35164822271216,
+            "author": "Saint-Saens"
+        },
+        {
+            "name": "Le Carnaval des Animaux (1886), 6. Kangourous.mid",
+            "scale": "major",
+            "key": "Eb",
+            "duration": 49.596560725000046,
+            "bpm": 110.2850911035879,
+            "author": "Saint-Saens"
+        },
+        {
+            "name": "Le Carnaval des Animaux (1886), 7. Aquarium.mid",
+            "scale": "major",
+            "key": "C",
+            "duration": 136.01022418333324,
+            "bpm": 68.09274920073109,
+            "author": "Saint-Saens"
+        },
+        {
+            "name": "Le Carnaval des Animaux (1886), 8. Personnages a` longues oreilles.mid",
+            "scale": "major",
+            "key": "C",
+            "duration": 40.846998,
+            "bpm": 133.75001492191467,
+            "author": "Saint-Saens"
+        }
+    ],
+    "Scarlatti": [
+        {
+            "name": "Rothchild Horn Concerto Rmw16 1mov.mid",
+            "scale": "major",
+            "key": "F",
+            "duration": 339.3909035208331,
+            "bpm": 93.0367203351504,
+            "author": "Scarlatti"
+        },
+        {
+            "name": "Rothchild Horn Concerto Rmw16 2mov.mid",
+            "scale": "major",
+            "key": "Bb",
+            "duration": 123.63004036458335,
+            "bpm": 67.72504713879093,
+            "author": "Scarlatti"
+        },
+        {
+            "name": "Rothchild Horn Concerto Rmw16 3mov.mid",
+            "scale": "major",
+            "key": "F",
+            "duration": 179.0933457656251,
+            "bpm": 147.8033209662626,
+            "author": "Scarlatti"
+        },
+        {
+            "name": "Rothchild Oboe Concerto Rmw09 1mov.mid",
+            "scale": "major",
+            "key": "G",
+            "duration": 189.38448332291674,
+            "bpm": 111.33152696650708,
+            "author": "Scarlatti"
+        },
+        {
+            "name": "Rothchild Oboe Concerto Rmw09 2mov.mid",
+            "scale": "minor",
+            "key": "Bb",
+            "duration": 112.32155895833333,
+            "bpm": 54.735311656381924,
+            "author": "Scarlatti"
+        },
+        {
+            "name": "Rothchild Oboe Concerto Rmw09 3mov.mid",
+            "scale": "major",
+            "key": "G",
+            "duration": 130.64398768749993,
+            "bpm": 123.77918803748821,
+            "author": "Scarlatti"
+        }
+    ],
+    "Schubert": [
+        {
+            "name": "Symphony D417 n4 1mov ''Tragic''.mid",
+            "scale": "major",
+            "key": "Eb",
+            "duration": 541.3822316833413,
+            "bpm": 208.70217507027468,
+            "author": "Schubert"
+        },
+        {
+            "name": "Symphony D417 n4 2mov ''Tragic''.mid",
+            "scale": "major",
+            "key": "Ab",
+            "duration": 541.7575649499996,
+            "bpm": 59.9779002173783,
+            "author": "Schubert"
+        },
+        {
+            "name": "Symphony D417 n4 3mov ''Tragic''.mid",
+            "scale": "major",
+            "key": "Eb",
+            "duration": 173.4891128999992,
+            "bpm": 244.31392028418077,
+            "author": "Schubert"
+        },
+        {
+            "name": "Symphony D417 n4 4mov ''Tragic''.mid",
+            "scale": "major",
+            "key": "Eb",
+            "duration": 680.9813290499986,
+            "bpm": 239.53091196925863,
+            "author": "Schubert"
+        },
+        {
+            "name": "Symphony D589 n6 1mov ''Little C Major Symphony''.mid",
+            "scale": "major",
+            "key": "C",
+            "duration": 584.5783710833371,
+            "bpm": 231.8635160232036,
+            "author": "Schubert"
+        },
+        {
+            "name": "Symphony D589 n6 2mov ''Little C Major Symphony''.mid",
+            "scale": "major",
+            "key": "F",
+            "duration": 455.98866077499997,
+            "bpm": 50.2234493475875,
+            "author": "Schubert"
+        },
+        {
+            "name": "Symphony D589 n6 3mov ''Little C Major Symphony''.mid",
+            "scale": "major",
+            "key": "C",
+            "duration": 364.981286649995,
+            "bpm": 322.8989795475729,
+            "author": "Schubert"
+        },
+        {
+            "name": "Symphony D589 n6 4mov ''Little C Major Symphony''.mid",
+            "scale": "major",
+            "key": "C",
+            "duration": 633.8293064583272,
+            "bpm": 121.6936417560879,
+            "author": "Schubert"
+        },
+        {
+            "name": "Symphony D944 n9 1mov ''Great''.mid",
+            "scale": "major",
+            "key": "C",
+            "duration": 981.0097358333342,
+            "bpm": 233.03194263889895,
+            "author": "Schubert"
+        },
+        {
+            "name": "Symphony D944 n9 2mov ''Great''.mid",
+            "scale": "major",
+            "key": "C",
+            "duration": 902.4307673916663,
+            "bpm": 51.18983729393034,
+            "author": "Schubert"
+        }
+    ],
+    "Schumann": [
+        {
+            "name": "Symphony n2 op61 3mov.mid",
+            "scale": "major",
+            "key": "Eb",
+            "duration": 594.6209983083346,
+            "bpm": 27.74031019683502,
+            "author": "Schumann"
+        },
+        {
+            "name": "Symphony n3 op97 ''Rhenish'' 1mov.mid",
+            "scale": "major",
+            "key": "Eb",
+            "duration": 593.3694086062496,
+            "bpm": 169.15121633939526,
+            "author": "Schumann"
+        },
+        {
+            "name": "Symphony n3 op97 ''Rhenish'' 2mov.mid",
+            "duration": 362.00220331250017,
+            "bpm": 82.75250378792826,
+            "author": "Schumann"
+        },
+        {
+            "name": "Symphony n3 op97 ''Rhenish'' 4mov.mid",
+            "scale": "major",
+            "key": "Eb",
+            "duration": 300.2716562104169,
+            "bpm": 89.24217545073562,
+            "author": "Schumann"
+        },
+        {
+            "name": "Symphony n3 op97 ''Rhenish'' 5mov.mid",
+            "scale": "major",
+            "key": "Eb",
+            "duration": 366.2481526875,
+            "bpm": 211.31278332325041,
+            "author": "Schumann"
+        },
+        {
+            "name": "Symphony n4 op120 1mov.mid",
+            "scale": "major",
+            "key": "F",
+            "duration": 610.5052704416665,
+            "bpm": 77.19796391136889,
+            "author": "Schumann"
+        },
+        {
+            "name": "Symphony n4 op120 2mov.mid",
+            "scale": "major",
+            "key": "F",
+            "duration": 309.63702391666686,
+            "bpm": 161.76622507651183,
+            "author": "Schumann"
+        },
+        {
+            "name": "Symphony n4 op120 4mov.mid",
+            "scale": "major",
+            "key": "F",
+            "duration": 566.518470408333,
+            "bpm": 185.03464963687708,
+            "author": "Schumann"
+        }
+    ],
+    "Shostakovich": [
+        {
+            "name": "Piano Concerto No.2, Mov.2.mid",
+            "scale": "major",
+            "key": "Eb",
+            "duration": 293.25905526666673,
+            "bpm": 59.39129746739473,
+            "author": "Shostakovich"
+        }
+    ],
+    "Tchaikovsky": [
+        {
+            "name": "Tchaicovsky Waltz of the Flowers.MID",
+            "scale": "major",
+            "key": "C",
+            "duration": 67.2252075,
+            "bpm": 182.000182000182,
+            "author": "Tchaikovsky"
+        },
+        {
+            "name": "Tchaikovsky Lake Of The Swans Act 1 1mov.mid",
+            "scale": "major",
+            "key": "D",
+            "duration": 360.74187229166904,
+            "bpm": 126.37904341648802,
+            "author": "Tchaikovsky"
+        },
+        {
+            "name": "Tchaikovsky Lake Of The Swans Act 1 2mov.mid",
+            "scale": "major",
+            "key": "A",
+            "duration": 457.0977742250015,
+            "bpm": 190.99903301804937,
+            "author": "Tchaikovsky"
+        },
+        {
+            "name": "Tchaikovsky Lake Of The Swans Act 1 3mov.mid",
+            "scale": "major",
+            "key": "C",
+            "duration": 229.58373265833356,
+            "bpm": 131.21777317873358,
+            "author": "Tchaikovsky"
+        },
+        {
+            "name": "Tchaikovsky Lake Of The Swans Act 1 4mov.mid",
+            "scale": "major",
+            "key": "Bb",
+            "duration": 697.7301208416651,
+            "bpm": 98.63843902711625,
+            "author": "Tchaikovsky"
+        },
+        {
+            "name": "Tchaikovsky Lake Of The Swans Act 1 5mov.mid",
+            "scale": "major",
+            "key": "D",
+            "duration": 667.1136765666686,
+            "bpm": 134.11687245358752,
+            "author": "Tchaikovsky"
+        },
+        {
+            "name": "Tchaikovsky Lake Of The Swans Act 1 6mov.mid",
+            "scale": "major",
+            "key": "E",
+            "duration": 169.02551235833312,
+            "bpm": 99.06433667985296,
+            "author": "Tchaikovsky"
+        },
+        {
+            "name": "Tchaikovsky Lake Of The Swans Act 1 7-8movs.mid",
+            "scale": "major",
+            "key": "E",
+            "duration": 442.40315900000013,
+            "bpm": 106.71318510277604,
+            "author": "Tchaikovsky"
+        },
+        {
+            "name": "Tchaikovsky Lake Of The Swans Act 1 9mov.mid",
+            "scale": "major",
+            "key": "D",
+            "duration": 149.3499554,
+            "bpm": 79.49998272068056,
+            "author": "Tchaikovsky"
+        },
+        {
+            "name": "Tchaikovsky Lake Of The Swans Act 2 10mov.mid",
+            "scale": "major",
+            "key": "D",
+            "duration": 170.3251531083334,
+            "bpm": 103.64332978891295,
+            "author": "Tchaikovsky"
+        },
+        {
+            "name": "Tchaikovsky Lake Of The Swans Act 2 11mov.mid",
+            "scale": "major",
+            "key": "G",
+            "duration": 333.9331052500024,
+            "bpm": 228.58425375714842,
+            "author": "Tchaikovsky"
+        },
+        {
+            "name": "Tchaikovsky Lake Of The Swans Act 2 12mov.mid",
+            "scale": "major",
+            "key": "C",
+            "duration": 204.79958983333327,
+            "bpm": 119.51196319988554,
+            "author": "Tchaikovsky"
+        },
+        {
+            "name": "Tchaikovsky Lake Of The Swans Act 2 13mov.mid",
+            "scale": "major",
+            "key": "A",
+            "duration": 1004.2605125166662,
+            "bpm": 137.52273074266034,
+            "author": "Tchaikovsky"
+        },
+        {
+            "name": "Tchaikovsky Lake Of The Swans Act 2 14mov.mid",
+            "scale": "major",
+            "key": "D",
+            "duration": 170.29578010833342,
+            "bpm": 103.27999635627417,
+            "author": "Tchaikovsky"
+        }
+    ],
+    "Varios - Ti'tulo desconocido": [
+        {
+            "name": "1812over.mid",
+            "scale": "major",
+            "key": "Eb",
+            "duration": 214.52106,
+            "bpm": 107.33335700001184,
+            "author": "Varios - Ti'tulo desconocido"
+        },
+        {
+            "name": "2001_2.mid",
+            "scale": "major",
+            "key": "C",
+            "duration": 85.26653866666669,
+            "bpm": 65.11366951252931,
+            "author": "Varios - Ti'tulo desconocido"
+        },
+        {
+            "name": "2ptinv1.mid",
+            "scale": "major",
+            "key": "C",
+            "duration": 270.6480054333333,
+            "bpm": 68.00002815240408,
+            "author": "Varios - Ti'tulo desconocido"
+        },
+        {
+            "name": "5th1stmv.mid",
+            "duration": 367.109243,
+            "bpm": 181.51882533287957,
+            "author": "Varios - Ti'tulo desconocido"
+        },
+        {
+            "name": "5th2ndmv.mid",
+            "duration": 477.8407745,
+            "bpm": 50.0000336000227,
+            "author": "Varios - Ti'tulo desconocido"
+        },
+        {
+            "name": "5th3rdmv.mid",
+            "scale": "major",
+            "duration": 369.375,
+            "bpm": 192,
+            "author": "Varios - Ti'tulo desconocido"
+        },
+        {
+            "name": "5thsym.mid",
+            "duration": 177.04799626041665,
+            "bpm": 179.97090013801107,
+            "author": "Varios - Ti'tulo desconocido"
+        },
+        {
+            "name": "5thsymp.mid",
+            "duration": 108.38187460416667,
+            "bpm": 145.9999659333413,
+            "author": "Varios - Ti'tulo desconocido"
+        },
+        {
+            "name": "5thsymph.mid",
+            "scale": "major",
+            "key": "C",
+            "duration": 211.67230395833337,
+            "bpm": 196.30102432268185,
+            "author": "Varios - Ti'tulo desconocido"
+        },
+        {
+            "name": "76tmbons.mid",
+            "scale": "major",
+            "key": "C",
+            "duration": 103.830451725,
+            "bpm": 180.00018000018,
+            "author": "Varios - Ti'tulo desconocido"
+        },
+        {
+            "name": "76tubas.mid",
+            "scale": "major",
+            "key": "C",
+            "duration": 103.8332295,
+            "bpm": 180.00018000018,
+            "author": "Varios - Ti'tulo desconocido"
+        },
+        {
+            "name": "hayden.mid",
+            "scale": "major",
+            "key": "C",
+            "duration": 148.63020833333334,
+            "bpm": 120,
+            "author": "Varios - Ti'tulo desconocido"
+        },
+        {
+            "name": "minuet0.mid",
+            "scale": "major",
+            "key": "C",
+            "duration": 46.019999999999996,
+            "bpm": 125,
+            "author": "Varios - Ti'tulo desconocido"
+        },
+        {
+            "name": "minuet1.mid",
+            "scale": "major",
+            "key": "C",
+            "duration": 35.880859375,
+            "bpm": 160,
+            "author": "Varios - Ti'tulo desconocido"
+        },
+        {
+            "name": "minuet2.mid",
+            "scale": "major",
+            "key": "C",
+            "duration": 43.636320000000005,
+            "bpm": 132.000132000132,
+            "author": "Varios - Ti'tulo desconocido"
+        },
+        {
+            "name": "osolemi_.mid",
+            "duration": 268.3125,
+            "bpm": 100,
+            "author": "Varios - Ti'tulo desconocido"
+        },
+        {
+            "name": "overtriv.mid",
+            "scale": "major",
+            "key": "C",
+            "duration": 82.63912190625001,
+            "bpm": 110.00011000011,
+            "author": "Varios - Ti'tulo desconocido"
+        }
+    ],
+    "Vivaldi": [
+        {
+            "name": "Concerto for violin and cello RV546 1mov.mid",
+            "scale": "major",
+            "key": "A",
+            "duration": 198.52590750000002,
+            "bpm": 80.92311685645168,
+            "author": "Vivaldi"
+        },
+        {
+            "name": "Concerto for violin and cello RV546 2mov.mid",
+            "scale": "major",
+            "key": "A",
+            "duration": 185.83328849999998,
+            "bpm": 37.50000562500141,
+            "author": "Vivaldi"
+        },
+        {
+            "name": "Concerto for violin and cello RV546 3mov.mid",
+            "scale": "major",
+            "key": "A",
+            "duration": 196.71684375,
+            "bpm": 107.07153175850034,
+            "author": "Vivaldi"
+        },
+        {
+            "name": "Oboe and Bassoon Concerto RV545 1mov.mid",
+            "scale": "major",
+            "key": "G",
+            "duration": 234.48694499999996,
+            "bpm": 78.000078000078,
+            "author": "Vivaldi"
+        },
+        {
+            "name": "Oboe and Bassoon Concerto RV545 2mov.mid",
+            "scale": "major",
+            "key": "D",
+            "duration": 131.75,
+            "bpm": 60,
+            "author": "Vivaldi"
+        },
+        {
+            "name": "Oboe and Bassoon Concerto RV545 3mov.mid",
+            "scale": "major",
+            "key": "G",
+            "duration": 293.21412933333335,
+            "bpm": 112.00005973336519,
+            "author": "Vivaldi"
+        },
+        {
+            "name": "Two Flutes Concerto RV533 1mov.mid",
+            "duration": 168.5011870583334,
+            "bpm": 85.80006604940502,
+            "author": "Vivaldi"
+        },
+        {
+            "name": "Two Oboes Concerto RV535 2mov.mid",
+            "duration": 136.29026000000002,
+            "bpm": 103.74998552085006,
+            "author": "Vivaldi"
+        },
+        {
+            "name": "Violin Concerto op9 n2 RV345.mid",
+            "scale": "major",
+            "key": "C",
+            "duration": 497.0208333333333,
+            "bpm": 120,
+            "author": "Vivaldi"
+        }
+    ],
+    "Wagner": [
+        {
+            "name": "Wagner Ride of the valkyries.mid",
+            "scale": "major",
+            "key": "C",
+            "duration": 165.6118083958333,
+            "bpm": 140.24112614363608,
+            "author": "Wagner"
+        }
+    ],
+    "Wolf": [
+        {
+            "name": "Ich hab' in Penna einen Liebsten wohnen.mid",
+            "scale": "major",
+            "key": "F",
+            "duration": 48.34375,
+            "bpm": 140,
+            "author": "Wolf"
+        },
+        {
+            "name": "Verschwiegene Liebe.mid",
+            "scale": "major",
+            "key": "Bb",
+            "duration": 165.83407441666668,
+            "bpm": 54.27417030429471,
+            "author": "Wolf"
+        }
+    ]
+}

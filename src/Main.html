@@ -2,18 +2,30 @@
   <head>
     <title>Music visualization</title>
     <script src="https://d3js.org/d3.v7.js"></script>
+    <script src="https://cdn.jsdelivr.net/combine/npm/tone@14.7.58,npm/@magenta/music@1.23.1/es6/core.js,npm/focus-visible@5,npm/html-midi-player@1.4.0"></script>
     <script src="https://unpkg.com/@tonejs/midi"></script>
   </head>
 
   <body class="main">
     <div style="display: flex; flex-direction: column">
       <div style="display: flex; height: calc(70vh - 30px)">
-        <div class="view" style="width: 20vw"></div>
-        <div class="view" style="width: 80vw"></div>
+        <div class="view" style="width: 30vw; padding: 20px" id="info">
+          <div>
+            <div class="title">Name</div>
+            <div class="subtitle" id="name_text"></div>
+            <div class="title">Composer</div>
+            <div class="subtitle" id="composer_text"></div>
+            <div class="title">Tone</div>
+            <div class="subtitle" id="tone_text"></div>
+          </div>
+          <midi-player id="midi-player" sound-font visualizer="#myVisualizer">
+          </midi-player>
+        </div>
+        <div class="view" id="overview" style="width: 70vw"></div>
       </div>
       <div
         class="view"
-        id="svg"
+        id="detail"
         style="height: 30vh; width: calc(100vw - 30px); overflow-x: scroll"
       ></div>
     </div>
@@ -21,10 +33,6 @@
     <script>
       // load a midi file in the browser
       let margin = { top: 0, right: 40, bottom: 0, left: 0 };
-      // let svg_size = Math.max(
-      //   document.documentElement.clientWidth - margin.left - margin.right - 20,
-      //   document.documentElement.clientHeight * 0.3
-      // );
       let vp = {
         width:
           document.documentElement.clientWidth -
@@ -33,40 +41,63 @@
           20,
         height: document.documentElement.clientHeight * 0.3 - 30,
       };
+      let curr_detail = "";
       let data = [];
-      let names = [
-        "alb_esp1.mid",
-        "alb_esp2.mid",
-        "alb_esp3.mid",
-        "alb_esp4.mid",
-        "alb_esp5.mid",
-        "alb_esp6.mid",
-        "alb_se1.mid",
-        "alb_se2.mid",
-        "alb_se3.mid",
-        "alb_se4.mid",
-        "alb_se5.mid",
-        "alb_se6.mid",
-        "alb_se7.mid",
-        "alb_se8.mid",
-        "alb_se9.mid",
-      ];
       let x, y;
-      let svg_density = define_svg("#svg");
-      let color = {
-        "Piano right": "#a6cee3",
-        "Piano left": "#1f78b4",
-        "1er Piano 1": "#a6cee3",
-        "1er Piano 2": "#1f78b4",
-        "2d Piano 1": "#b1d5c8",
-        "2d Piano 2": "#80a492",
-        Violoncelle: "#ffee6f",
-      };
-      load_data(names[0]);
+      let detail_size = 10;
+      let music_index = 0;
+      let svg_detail = define_svg(
+        "#detail",
+        detail_size * (vp.width + margin.left + margin.right),
+        vp.height + margin.top + margin.bottom,
+        margin.right,
+        0
+      );
+      let svg_overview = define_svg(
+        "#overview",
+        document.documentElement.clientWidth * 0.7,
+        document.documentElement.clientHeight * 0.7 - 30,
+        10,
+        10
+      );
+      let color_index = 0;
+      let color = [
+        "#8dd3c7",
+        "#ffffb3",
+        "#bebada",
+        "#fb8072",
+        "#80b1d3",
+        "#fdb462",
+        "#b3de69",
+        "#fccde5",
+        "#d9d9d9",
+        "#bc80bd",
+        "#ccebc5",
+        "#ffed6f",
+        "#984f31",
+        "#f06292",
+        "#6b798e",
+        "#4f6f46",
+      ];
+      read_csv();
+      var MidiPlayer = require("midi-player-js");
 
+      // Initialize player and register event handler
+      var Player = new MidiPlayer.Player(function (event) {
+        console.log(event);
+      });
+
+      // Load a MIDI file
+
+      async function read_csv() {
+        d3.json("./all_data.json").then((d) => {
+          render_glyph(d);
+        });
+      }
       async function load_data(name) {
-        data = await Midi.fromUrl("../data/albeniz/" + name);
-        console.log(data);
+        data = await Midi.fromUrl("../data/" + name);
+        // Player.loadFile("../data/" + name);
+        // Player.play();
 
         //the file name decoded from the first track
         // const name = midi.name;
@@ -93,38 +124,40 @@
         // );
         for (let index = 0; index < 20; index++) {
           if (data.tracks[index] == undefined) break;
-          if (data.tracks[index].notes.length != 0)
-            render(data.tracks[index].notes, index);
+          if (data.tracks[index].notes.length > 30)
+            render(data.tracks[index].notes, index, data.duration);
         }
       }
+
       /**
        * add a svg to the given place
        * @param [selector] a string represent a class/id/tag
        * @return the svg object
        */
-      function define_svg(selector) {
+      function define_svg(selector, w, h, x, y) {
         let svg = d3
           .select(selector)
           .append("svg")
-          .attr("width", 5 * (vp.width + margin.left + margin.right))
-          .attr("height", vp.height + margin.top + margin.bottom)
+          .attr("width", w)
+          .attr("height", h)
           .append("g")
-          .attr("transform", "translate(" + margin.right + "," + 0 + ")");
+          .attr("transform", "translate(" + x + "," + y + ")");
         return svg;
       }
-      function render(ddata, index) {
+      function render(ddata, index, time) {
+        let d;
         var x = d3
           .scaleLinear()
-          .domain([0, 260])
-          .range([0, vp.width * 5]);
+          .domain([0, time + 5])
+          .range([0, vp.width * detail_size]);
 
-        var y = d3.scaleLinear().domain([0, 1]).range([0, 50]);
+        var y = d3.scaleLinear().domain([0, 1]).range([0, 30]);
 
-        let midi = d3.scaleLinear().domain([0, 120]).range([0, vp.height]);
+        let midi = d3.scaleLinear().domain([10, 110]).range([0, vp.height]);
         let area = d3
           .area()
           .x(function (d) {
-            return x(d.time);
+            return x(d.time + 5);
           })
           .y0(function (d) {
             return midi(d.midi);
@@ -134,13 +167,168 @@
           })
 
           .curve(d3.curveBasis);
-        svg_density
+
+        svg_detail
           .selectAll("#Selector")
           .data([ddata])
           .join("path")
-          .attr("fill", color[data.tracks[index].name])
-          // .attr("stroke", color[index])
+          .attr("fill", color[color_index])
+          .attr("opacity", 0.7)
           .attr("d", (d) => area(d));
+        color_index += 1;
+      }
+      async function render_glyph(data) {
+        let num = 28;
+        let margin = (document.documentElement.clientHeight * 0.7) / num;
+        let size_scale = d3
+          .scalePow()
+          .domain([0, 1226])
+          .range([margin * 0.1, margin * 0.5]);
+        let opacity_scale = d3.scaleLinear().domain([40, 150]).range([0.1, 1]);
+
+        let data_copy = { children: [] };
+
+        for (let item in data) {
+          data_copy.children.push({ children: data[item] });
+        }
+
+        var root = d3
+          .hierarchy(data_copy)
+          .sum((d) => (d.hasOwnProperty("duration") ? d.duration : 0));
+
+        var partition = d3
+          .pack()
+          .size([
+            document.documentElement.clientHeight * 0.7 - 60,
+            document.documentElement.clientHeight * 0.7 - 60,
+          ])
+          .padding(4);
+
+        partition(root);
+
+        // packing layout
+        console.log(root.descendants());
+        let dots = svg_overview
+          .selectAll("#selector")
+          .data(root.descendants())
+          .join("g");
+        dots
+          .append("circle")
+          .attr("r", (d) => d.r)
+          .attr("cx", (d, i) => d.x)
+          .attr("cy", (d, i) => d.y)
+          .attr("fill", (d) => {
+            if (d.data.scale == "major") return "#c12c1f";
+            else if (d.data.scale == "minor") return "#2e59a7";
+            else if (d.children != undefined) return "rgba(0,0,0,0)";
+            else return "grey";
+          })
+          .attr("stroke", (d, i) => (d.children != undefined ? "#dfceb4" : ""))
+          .attr("opacity", (d) => opacity_scale(d.data.bpm))
+          .on("click", (e) => {
+            curr_detail = e.path[0].__data__.data;
+            svg_detail.selectAll("path").remove();
+            color_index = 0;
+            load_data(curr_detail.author + "/" + curr_detail.name);
+            let midi = document.getElementById("midi-player");
+            let name = document.getElementById("name_text");
+            let composer = document.getElementById("composer_text");
+            let tone = document.getElementById("tone_text");
+            midi.src = `../data/${curr_detail.author}/${curr_detail.name}`;
+            name.innerHTML = curr_detail.name;
+            composer.innerHTML = curr_detail.author;
+            console.log(midi);
+          });
+        // dots
+        //   .append("text")
+        //   .text((d, i) => (i == 0 ? item : ""))
+        //   .attr(
+        //     "x",
+        //     (d, i) => ((music_index + i) % num) * margin + margin / 2 - 15
+        //   )
+        //   .attr(
+        //     "y",
+        //     (d, i) =>
+        //       ((music_index + i - ((music_index + i) % num)) / num) * margin +
+        //       margin / 2 -
+        //       15
+        //   )
+        //   .attr("text-ankcker");
+
+        for (let item of Object.keys(data)) {
+          let index = Object.keys(data).indexOf(item);
+
+          // // preprocessing
+          // for (let i in data[item]) {
+          //   let tmp = await Midi.fromUrl(
+          //     "../data/" + item + "/" + data[item][i].name
+          //   );
+          //   // console.log(tmp);
+          //   let bpm = 0;
+          //   for (let index in tmp.header.tempos) {
+          //     bpm += tmp.header.tempos[index].bpm;
+          //   }
+          //   bpm /= tmp.header.tempos.length;
+          //   // console.log(tmp.header.tempos);
+
+          //   if (tmp.header.keySignatures[0] != undefined) {
+          //     data[item][i].scale = tmp.header.keySignatures[0].scale;
+          //     data[item][i].key = tmp.header.keySignatures[0].key;
+          //   }
+          //   data[item][i].duration = tmp.duration;
+          //   // data[item][i].tempos = tmp.header.tempos;
+          //   data[item][i].bpm = bpm;
+          //   data[item][i].author=item
+          // }
+
+          // rank layout
+          // let dots = svg_overview
+          //   .selectAll("#selector")
+          //   .data(data[item])
+          //   .join("g");
+          // dots
+          //   .append("circle")
+          //   .attr("r", (d) => size_scale(d.duration))
+          //   .attr(
+          //     "cx",
+          //     (d, i) => ((music_index + i) % num) * margin + margin / 2
+          //   )
+          //   .attr(
+          //     "cy",
+          //     (d, i) =>
+          //       ((music_index + i - ((music_index + i) % num)) / num) * margin +
+          //       margin / 2
+          //   )
+          //   .attr("fill", (d) => {
+          //     if (d.scale == "major") return "#c12c1f";
+          //     else if (d.scale == "minor") return "#2e59a7";
+          //     else return "grey";
+          //   })
+          //   .attr("opacity", (d) => opacity_scale(d.bpm))
+          //   .on("click", (e) => {
+          //     curr_detail = e.path[0].__data__.name;
+          //     svg_detail.selectAll("path").remove();
+          //     color_index = 0;
+          //     load_data(item + "/" + curr_detail);
+          //   });
+          // dots
+          //   .append("text")
+          //   .text((d, i) => (i == 0 ? item : ""))
+          //   .attr(
+          //     "x",
+          //     (d, i) => ((music_index + i) % num) * margin + margin / 2 - 15
+          //   )
+          //   .attr(
+          //     "y",
+          //     (d, i) =>
+          //       ((music_index + i - ((music_index + i) % num)) / num) * margin +
+          //       margin / 2 -
+          //       15
+          //   )
+          //   .attr("text-ankcker");
+          music_index += data[item].length;
+        }
+        console.log(data);
       }
     </script>
     <style>
@@ -152,6 +340,20 @@
       }
       .main {
         background-color: #c7c6b6;
+      }
+      .title {
+        font-size: 20px;
+        font-weight: 800;
+        color: #434343;
+        margin: 5px;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+      }
+      .subtitle {
+        font-size: 16px;
+        font-weight: 500;
+        color: #bec2bc;
+        margin-left: 5px;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
       }
     </style>
   </body>
