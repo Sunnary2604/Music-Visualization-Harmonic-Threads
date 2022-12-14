@@ -33,7 +33,6 @@
       var partition = d3.pack().size([250, 250]);
 
       partition(root);
-      console.log(root.descendants());
 
       d3.select("#demo1 g")
         .selectAll("circle.node")

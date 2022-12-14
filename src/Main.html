@@ -8,8 +8,9 @@
 
   <body class="main">
     <div style="display: flex; flex-direction: column">
-      <div style="display: flex; height: calc(70vh - 30px)">
-        <div class="view" style="width: 30vw; padding: 20px" id="info">
+      <div style="display: flex; height: calc(60vh - 30px)">
+        <div class="view" style="width: 40vw; padding: 20px" id="info">
+          <div style="font-size: 24px; font-weight: 800">MUSIC BOARD</div>
           <div>
             <div class="title">Name</div>
             <div class="subtitle" id="name_text"></div>
@@ -17,16 +18,24 @@
             <div class="subtitle" id="composer_text"></div>
             <div class="title">Tone</div>
             <div class="subtitle" id="tone_text"></div>
+            <div class="title">BPM</div>
+            <div class="subtitle" id="bpm_text"></div>
+            <div id="bpm"></div>
           </div>
-          <midi-player id="midi-player" sound-font visualizer="#myVisualizer">
+          <midi-player
+            style="margin-top: 20px; margin-left: 200px"
+            id="midi-player"
+            sound-font
+            visualizer="#myVisualizer"
+          >
           </midi-player>
         </div>
-        <div class="view" id="overview" style="width: 70vw"></div>
+        <div class="view" id="overview" style="width: 60vw"></div>
       </div>
       <div
         class="view"
         id="detail"
-        style="height: 30vh; width: calc(100vw - 30px); overflow-x: scroll"
+        style="height: 40vh; width: calc(100vw - 30px); overflow-x: scroll"
       ></div>
     </div>
 
@@ -39,53 +48,50 @@
           margin.left -
           margin.right -
           20,
-        height: document.documentElement.clientHeight * 0.3 - 30,
+        height: document.documentElement.clientHeight * 0.4 - 20,
       };
       let curr_detail = "";
       let data = [];
       let x, y;
-      let detail_size = 10;
+      let detail_size = 1;
       let music_index = 0;
       let svg_detail = define_svg(
         "#detail",
-        detail_size * (vp.width + margin.left + margin.right),
+        detail_size * vp.width,
         vp.height + margin.top + margin.bottom,
         margin.right,
         0
       );
       let svg_overview = define_svg(
         "#overview",
-        document.documentElement.clientWidth * 0.7,
-        document.documentElement.clientHeight * 0.7 - 30,
+        document.documentElement.clientWidth * 0.6 - 50,
+        document.documentElement.clientHeight * 0.6 - 30,
         10,
         10
       );
+      let svg_bpm = define_svg(
+        "#bpm",
+        document.documentElement.clientWidth * 0.4 - 30,
+        document.documentElement.clientHeight * 0.2 - 30,
+        15,
+        15
+      );
       let color_index = 0;
-      let color = [
-        "#8dd3c7",
-        "#ffffb3",
-        "#bebada",
-        "#fb8072",
-        "#80b1d3",
-        "#fdb462",
-        "#b3de69",
-        "#fccde5",
-        "#d9d9d9",
-        "#bc80bd",
-        "#ccebc5",
-        "#ffed6f",
-        "#984f31",
-        "#f06292",
-        "#6b798e",
-        "#4f6f46",
-      ];
-      read_csv();
-      var MidiPlayer = require("midi-player-js");
 
-      // Initialize player and register event handler
-      var Player = new MidiPlayer.Player(function (event) {
-        console.log(event);
-      });
+      let color = {
+        piano: "#c8161d",
+        organ: "#b3de69",
+        "chromatic percussion": "#80b1d3",
+        bass: "#ffed6f",
+        guitar: "#f06292",
+        strings: "#fdb462",
+        ensemble: "#bc80bd",
+        brass: "#4f6f46",
+        reed: "#984f31",
+        pipe: "#509296",
+        drums: "#6b798e",
+      };
+      read_csv();
 
       // Load a MIDI file
 
@@ -122,10 +128,26 @@
         //   //track.instrument.name
         // }
         // );
+        d3.selectAll("#detail").selectAll("svg").remove();
+        detail_size = data.duration / 60;
+        svg_detail = define_svg(
+          "#detail",
+          detail_size * vp.width,
+          vp.height + margin.top + margin.bottom,
+          margin.right,
+          0
+        );
+        console.log(data);
+        renderBPM(data.header.tempos, data.duration);
         for (let index = 0; index < 20; index++) {
           if (data.tracks[index] == undefined) break;
-          if (data.tracks[index].notes.length > 30)
-            render(data.tracks[index].notes, index, data.duration);
+          if (data.tracks[index].notes.length > 0)
+            render(
+              data.tracks[index].notes,
+              index,
+              data.duration,
+              data.tracks[index].instrument
+            );
         }
       }
 
@@ -144,47 +166,157 @@
           .attr("transform", "translate(" + x + "," + y + ")");
         return svg;
       }
-      function render(ddata, index, time) {
+      function render(ddata, index, time, instrument) {
         let d;
         var x = d3
           .scaleLinear()
-          .domain([0, time + 5])
+          .domain([0, time + 0.5])
           .range([0, vp.width * detail_size]);
 
-        var y = d3.scaleLinear().domain([0, 1]).range([0, 30]);
+        var y = d3.scaleLinear().domain([0.2, 1]).range([0, 20]);
 
-        let midi = d3.scaleLinear().domain([10, 110]).range([0, vp.height]);
+        let midi = d3.scaleLinear().domain([110, 10]).range([0, vp.height]);
+
         let area = d3
           .area()
           .x(function (d) {
-            return x(d.time + 5);
+            return x(d.time);
           })
           .y0(function (d) {
-            return midi(d.midi);
+            return midi(d.midi) + y(d.velocity) / 2;
           })
-          .y1(function (d) {
-            return midi(d.midi) + y(d.velocity);
+          .y1(function (d, i) {
+            let result;
+            if (i < ddata.length - 2) {
+              if (ddata[i + 1].time - d.time > 2)
+                result = midi(d.midi) + y(d.velocity) / 2;
+              else result = midi(d.midi) - y(d.velocity) / 2;
+            } else result = midi(d.midi) - y(d.velocity) / 2;
+            result = midi(d.midi) - y(d.velocity) / 2;
+            return result;
           })
 
           .curve(d3.curveBasis);
+        let start = 1,
+          end = 2;
+        // ddata = [""].concat(ddata);
+        for (let subindex = 1; subindex < ddata.length - 1; subindex += 1) {
+          if (
+            ddata[end].time - ddata[start].time >
+            ddata[start].duration + 0.1
+          ) {
+            let instrument_path = svg_detail
+              .selectAll("#Selector")
+              .data([ddata.slice(start - 1, end)])
+              .join("g");
+            instrument_path
+              .append("path")
+              .attr("id", "instrument_" + index)
+              .attr("fill", color[instrument.family])
+              .attr("opacity", 0.5)
+              .attr("d", (d) => area(d))
+              .on("mouseover", (e) => {
+                svg_detail.selectAll("#" + e.path[0].id).attr("opacity", 1);
 
-        svg_detail
-          .selectAll("#Selector")
-          .data([ddata])
+                instrument_path
+                  .append("text")
+                  .text(instrument.name)
+                  .attr("x", (d, i) => e.offsetX)
+                  .attr("y", (d, i) => e.offsetY + 10)
+                  .attr("fill", "#434343")
+                  .attr("font-size", "16px")
+                  .attr("font-weight", "800")
+                  .attr("text-anchor", "middle");
+              })
+              .on("mouseout", (e) => {
+                instrument_path.selectAll("text").remove();
+                svg_detail.selectAll("#" + e.path[0].id).attr("opacity", 0.5);
+              });
+            start = subindex;
+            end = subindex + 1;
+          } else {
+            end += 1;
+            if (end == ddata.length - 1) {
+              let instrument_path = svg_detail
+                .selectAll("#Selector")
+                .data([ddata.slice(start - 1, end)])
+                .join("g");
+              instrument_path
+                .append("path")
+                .attr("fill", color[instrument.family])
+                .attr("opacity", 0.7)
+                .attr("d", (d) => area(d))
+                .on("mouseover", (e) => {
+                  // console.log(e);
+                  instrument_path
+                    .append("text")
+                    .text(instrument.name)
+                    .attr("x", (d, i) => e.offsetX)
+                    .attr("y", (d, i) => e.offsetY + 10)
+                    .attr("fill", "#434343")
+                    .attr("font-size", "16px")
+                    .attr("font-weight", "800")
+                    .attr("text-anchor", "middle");
+                })
+                .on("mouseout", (e) => {
+                  instrument_path.selectAll("text").remove();
+                });
+            }
+          }
+
+          color_index += 1;
+        }
+      }
+      function renderBPM(data, duration) {
+        let scaleX = d3
+          .scaleLinear()
+          .domain([0, duration])
+          .range([0, document.documentElement.clientWidth * 0.4 - 50]);
+        let scaleY = d3
+          .scaleLinear()
+          .domain([380, 0])
+          .range([0, document.documentElement.clientHeight * 0.2 - 30]);
+        let line = d3
+          .line()
+          .x(function (d, i) {
+            return scaleX(d.time);
+          })
+          .y(function (d) {
+            return scaleY(d.bpm);
+          });
+        let axisY = d3.axisLeft(scaleY);
+        let axisYG = svg_bpm
+          .append("g")
+          .attr("class", "axisY")
+          .call(axisY)
+          .attr("transform", "translate(30,0)");
+        //绘制innerY
+        axisYG
+          .selectAll("g.tick")
+          .selectAll("line")
+
+          .attr("x1", -5)
+          .attr("x2", document.documentElement.clientWidth * 0.4 - 30)
+
+          .attr("stroke-dasharray", "5, 5");
+        svg_bpm
+          .selectAll("#selector")
+          .data([data])
           .join("path")
-          .attr("fill", color[color_index])
-          .attr("opacity", 0.7)
-          .attr("d", (d) => area(d));
-        color_index += 1;
+          .attr("transform", "translate(30,0)")
+          .style("fill", "none") //此处需要将处理是为了折线只显示线条
+          .style("stroke", "#775039")
+          .style("stroke-width", 3)
+          .attr("d", line);
       }
       async function render_glyph(data) {
         let num = 28;
-        let margin = (document.documentElement.clientHeight * 0.7) / num;
+        let margin = (document.documentElement.clientHeight * 0.6) / num;
         let size_scale = d3
           .scalePow()
           .domain([0, 1226])
           .range([margin * 0.1, margin * 0.5]);
-        let opacity_scale = d3.scaleLinear().domain([40, 150]).range([0.1, 1]);
+        let opacity_scale = d3.scaleLog().domain([40, 250]).range([0.1, 1]);
 
         let data_copy = { children: [] };
 
@@ -199,15 +331,14 @@
         var partition = d3
           .pack()
           .size([
-            document.documentElement.clientHeight * 0.7 - 60,
-            document.documentElement.clientHeight * 0.7 - 60,
+            document.documentElement.clientWidth * 0.6,
+            document.documentElement.clientHeight * 0.6 - 60,
           ])
-          .padding(4);
+          .padding(1);
 
         partition(root);
 
         // packing layout
-        console.log(root.descendants());
         let dots = svg_overview
           .selectAll("#selector")
           .data(root.descendants())
@@ -227,33 +358,33 @@
           .attr("opacity", (d) => opacity_scale(d.data.bpm))
           .on("click", (e) => {
             curr_detail = e.path[0].__data__.data;
-            svg_detail.selectAll("path").remove();
-            color_index = 0;
-            load_data(curr_detail.author + "/" + curr_detail.name);
-            let midi = document.getElementById("midi-player");
-            let name = document.getElementById("name_text");
-            let composer = document.getElementById("composer_text");
-            let tone = document.getElementById("tone_text");
-            midi.src = `../data/${curr_detail.author}/${curr_detail.name}`;
-            name.innerHTML = curr_detail.name;
-            composer.innerHTML = curr_detail.author;
-            console.log(midi);
+            if (curr_detail.children == undefined) {
+              svg_detail.selectAll("svg").remove();
+              svg_bpm.selectAll("path").remove();
+              color_index = 0;
+              load_data(curr_detail.author + "/" + curr_detail.name);
+              let midi = document.getElementById("midi-player");
+              let name = document.getElementById("name_text");
+              let composer = document.getElementById("composer_text");
+              let tone = document.getElementById("tone_text");
+              let bpm = document.getElementById("bpm_text");
+              midi.src = `../data/${curr_detail.author}/${curr_detail.name}`;
+              name.innerHTML = curr_detail.name.split(".mid")[0];
+              composer.innerHTML = curr_detail.author;
+              tone.innerHTML = curr_detail.key + ` (${curr_detail.scale})`;
+              bpm.innerHTML = Math.round(curr_detail.bpm);
+            }
           });
-        // dots
-        //   .append("text")
-        //   .text((d, i) => (i == 0 ? item : ""))
-        //   .attr(
-        //     "x",
-        //     (d, i) => ((music_index + i) % num) * margin + margin / 2 - 15
-        //   )
-        //   .attr(
-        //     "y",
-        //     (d, i) =>
-        //       ((music_index + i - ((music_index + i) % num)) / num) * margin +
-        //       margin / 2 -
-        //       15
-        //   )
-        //   .attr("text-ankcker");
+        dots
+          .append("text")
+          .text((d, i) => {
+            return d.children == undefined ? "" : d.children[0].data.author;
+          })
+          .attr("x", (d, i) => d.x)
+          .attr("y", (d, i) => d.y)
+          .attr("font-size", "12px")
+          .attr("font-weight", "600")
+          .attr("text-anchor", "middle");
 
         for (let item of Object.keys(data)) {
           let index = Object.keys(data).indexOf(item);
@@ -342,17 +473,17 @@
         background-color: #c7c6b6;
       }
       .title {
-        font-size: 20px;
+        font-size: 22px;
         font-weight: 800;
         color: #434343;
-        margin: 5px;
+        margin: 10px 10px 10px 10px;
         font-family: Verdana, Geneva, Tahoma, sans-serif;
       }
       .subtitle {
-        font-size: 16px;
+        font-size: 20px;
         font-weight: 500;
         color: #bec2bc;
-        margin-left: 5px;
+        margin-left: 10px;
         font-family: Verdana, Geneva, Tahoma, sans-serif;
       }
     </style>
