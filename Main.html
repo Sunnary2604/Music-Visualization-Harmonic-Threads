@@ -96,12 +96,12 @@
       // Load a MIDI file
 
       async function read_csv() {
-        d3.json("./all_data.json").then((d) => {
+        d3.json("./src/all_data.json").then((d) => {
           render_glyph(d);
         });
       }
       async function load_data(name) {
-        data = await Midi.fromUrl("../data/" + name);
+        data = await Midi.fromUrl("./data/" + name);
         // Player.loadFile("../data/" + name);
         // Player.play();
 
@@ -129,7 +129,7 @@
         // }
         // );
         d3.selectAll("#detail").selectAll("svg").remove();
-        detail_size = data.duration / 60;
+        detail_size = data.duration / 30;
         svg_detail = define_svg(
           "#detail",
           detail_size * vp.width,
@@ -173,9 +173,10 @@
           .domain([0, time + 0.5])
           .range([0, vp.width * detail_size]);
 
-        var y = d3.scaleLinear().domain([0.2, 1]).range([0, 20]);
+        var y = d3.scaleLog().domain([0.2, 1]).range([0, 30]);
 
         let midi = d3.scaleLinear().domain([110, 10]).range([0, vp.height]);
+        let opacity_scale = d3.scaleLinear().domain([0.4, 1]).range([0.1, 1]);
 
         let area = d3
           .area()
@@ -194,16 +195,15 @@
             } else result = midi(d.midi) - y(d.velocity) / 2;
             result = midi(d.midi) - y(d.velocity) / 2;
             return result;
-          })
-
-          .curve(d3.curveBasis);
+          });
+        // .curve(d3.curveBasis);
         let start = 1,
           end = 2;
         // ddata = [""].concat(ddata);
         for (let subindex = 1; subindex < ddata.length - 1; subindex += 1) {
           if (
             ddata[end].time - ddata[start].time >
-            ddata[start].duration + 0.1
+            ddata[start].duration 
           ) {
             let instrument_path = svg_detail
               .selectAll("#Selector")
@@ -213,7 +213,7 @@
               .append("path")
               .attr("id", "instrument_" + index)
               .attr("fill", color[instrument.family])
-              .attr("opacity", 0.5)
+              .attr("opacity", (d) => opacity_scale(d[0].velocity))
               .attr("d", (d) => area(d))
               .on("mouseover", (e) => {
                 svg_detail.selectAll("#" + e.path[0].id).attr("opacity", 1);
@@ -221,16 +221,19 @@
                 instrument_path
                   .append("text")
                   .text(instrument.name)
-                  .attr("x", (d, i) => e.offsetX)
-                  .attr("y", (d, i) => e.offsetY + 10)
+                  .attr("x", e.offsetX + 20)
+                  .attr("y", e.offsetY - 20)
                   .attr("fill", "#434343")
                   .attr("font-size", "16px")
+                  .attr("z-index", 999)
                   .attr("font-weight", "800")
                   .attr("text-anchor", "middle");
               })
               .on("mouseout", (e) => {
                 instrument_path.selectAll("text").remove();
-                svg_detail.selectAll("#" + e.path[0].id).attr("opacity", 0.5);
+                svg_detail
+                  .selectAll("#" + e.path[0].id)
+                  .attr("opacity", (d) => opacity_scale(d[0].velocity));
               });
             start = subindex;
             end = subindex + 1;
@@ -247,23 +250,25 @@
                 .attr("opacity", 0.7)
                 .attr("d", (d) => area(d))
                 .on("mouseover", (e) => {
+                  svg_detail.selectAll("#" + e.path[0].id).attr("opacity", 1);
                   // console.log(e);
                   instrument_path
                     .append("text")
                     .text(instrument.name)
-                    .attr("x", (d, i) => e.offsetX)
-                    .attr("y", (d, i) => e.offsetY + 10)
+                    .attr("x", e.offsetX + 20)
+                    .attr("y", e.offsetY - 20)
                     .attr("fill", "#434343")
+                    .attr("z-index", 999)
                     .attr("font-size", "16px")
                     .attr("font-weight", "800")
-                    .attr("text-anchor", "middle");
+                    .attr("text-anchor", "start");
                 })
                 .on("mouseout", (e) => {
                   instrument_path.selectAll("text").remove();
+                  svg_detail.selectAll("#" + e.path[0].id).attr("opacity", 0.7);
                 });
             }
           }
-
           color_index += 1;
         }
       }
@@ -368,7 +373,7 @@
               let composer = document.getElementById("composer_text");
               let tone = document.getElementById("tone_text");
               let bpm = document.getElementById("bpm_text");
-              midi.src = `../data/${curr_detail.author}/${curr_detail.name}`;
+              midi.src = `./data/${curr_detail.author}/${curr_detail.name}`;
               name.innerHTML = curr_detail.name.split(".mid")[0];
               composer.innerHTML = curr_detail.author;
               tone.innerHTML = curr_detail.key + ` (${curr_detail.scale})`;
