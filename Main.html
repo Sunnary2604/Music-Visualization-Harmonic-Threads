@@ -79,18 +79,21 @@
       let color_index = 0;
 
       let color = {
-        piano: "#c8161d",
-        organ: "#b3de69",
-        "chromatic percussion": "#80b1d3",
-        bass: "#ffed6f",
-        guitar: "#f06292",
-        strings: "#fdb462",
-        ensemble: "#bc80bd",
-        brass: "#4f6f46",
-        reed: "#984f31",
-        pipe: "#509296",
-        drums: "#6b798e",
+        piano: "#e60033",
+        organ: "#7b8d42",
+        "chromatic percussion": "#594c57",
+        bass: "#f08300",
+        guitar: "#f09199",
+        strings: "#9d5b8b",
+        ensemble: "#192f60",
+        brass: "#ffea00",
+        reed: "#38b48b",
+        pipe: "#2ca9e1",
+        drums: "#686a67",
       };
+      let max_velocity = 0,
+        min_velocity = 1;
+
       read_csv();
 
       // Load a MIDI file
@@ -102,8 +105,6 @@
       }
       async function load_data(name) {
         data = await Midi.fromUrl("./data/" + name);
-        // Player.loadFile("../data/" + name);
-        // Player.play();
 
         //the file name decoded from the first track
         // const name = midi.name;
@@ -142,8 +143,17 @@
         for (let index = 0; index < 20; index++) {
           if (data.tracks[index] == undefined) break;
           if (data.tracks[index].notes.length > 0)
+            for (let note of data.tracks[index].notes) {
+              max_velocity = Math.max(note.velocity, max_velocity);
+              min_velocity = Math.min(note.velocity, min_velocity);
+            }
+        }
+
+        for (let index = 0; index < 20; index++) {
+          if (data.tracks[index] == undefined) break;
+          if (data.tracks[index].notes.length > 0)
             render(
-              data.tracks[index].notes,
+              data.tracks[index],
               index,
               data.duration,
               data.tracks[index].instrument
@@ -166,24 +176,25 @@
           .attr("transform", "translate(" + x + "," + y + ")");
         return svg;
       }
-      function render(ddata, index, time, instrument) {
+      function render(data, index, time, instrument) {
+        let ddata = data.notes;
         let d;
         var x = d3
           .scaleLinear()
           .domain([0, time + 0.5])
-          .range([0, vp.width * detail_size]);
+          .range([0, vp.width * detail_size - 100]);
 
-        var y = d3.scaleLog().domain([0.2, 1]).range([0, 30]);
+        var y = d3.scaleLog().domain([0.2, 1]).range([0, 25]);
 
         let midi = d3.scaleLinear().domain([110, 10]).range([0, vp.height]);
-        let opacity_scale = d3.scaleLinear().domain([0.4, 1]).range([0.3, 1]);
-        let max_velocity = 1,
-          min_velocity = 0;
+
+        let opacity_scale = d3
+          .scaleLinear()
+          .domain([min_velocity, max_velocity])
+          .range([0.2, 1]);
         let area = d3
           .area()
           .x(function (d) {
-            max_velocity = Math.max(max_velocity, d.velocity);
-            min_velocity = Math.min(min_velocity, d.velocity);
             return x(d.time);
           })
           .y0(function (d) {
@@ -202,10 +213,11 @@
         // .curve(d3.curveBasis);
         let start = 1,
           end = 2;
-        // ddata = [""].concat(ddata);
+
+        let instrument_path;
         for (let subindex = 1; subindex < ddata.length - 1; subindex += 1) {
           if (ddata[end].time - ddata[start].time > ddata[start].duration) {
-            let instrument_path = svg_detail
+            instrument_path = svg_detail
               .selectAll("#Selector")
               .data([ddata.slice(start - 1, end)])
               .join("g");
@@ -217,10 +229,9 @@
               .attr("d", (d) => area(d))
               .on("mouseover", (e) => {
                 svg_detail.selectAll("#" + e.path[0].id).attr("opacity", 1);
-
                 instrument_path
                   .append("text")
-                  .text(instrument.name)
+                  .text(data.name != "" ? data.name : instrument.name)
                   .attr("x", e.offsetX + 20)
                   .attr("y", e.offsetY - 20)
                   .attr("fill", "#434343")
@@ -235,12 +246,13 @@
                   .selectAll("#" + e.path[0].id)
                   .attr("opacity", (d) => opacity_scale(d[0].velocity));
               });
+
             start = subindex;
             end = subindex + 1;
           } else {
             end += 1;
             if (end == ddata.length - 1) {
-              let instrument_path = svg_detail
+              instrument_path = svg_detail
                 .selectAll("#Selector")
                 .data([ddata.slice(start - 1, end)])
                 .join("g");
@@ -248,13 +260,14 @@
                 .append("path")
                 .attr("fill", color[instrument.family])
                 .attr("opacity", 0.7)
+                .attr("id", "instrument_" + index)
                 .attr("d", (d) => area(d))
                 .on("mouseover", (e) => {
                   svg_detail.selectAll("#" + e.path[0].id).attr("opacity", 1);
-                  // console.log(e);
+
                   instrument_path
                     .append("text")
-                    .text(instrument.name)
+                    .text(data.name != "" ? data.name : instrument.name)
                     .attr("x", e.offsetX + 20)
                     .attr("y", e.offsetY - 20)
                     .attr("fill", "#434343")
@@ -271,6 +284,23 @@
           }
           color_index += 1;
         }
+        let axisY_detail = d3
+          .axisBottom(x)
+          .ticks(time / 10, "s")
+          .tickFormat(d3.format(".0f"));
+        instrument_path
+          .append("g")
+          .attr("class", "axisY")
+          .call(axisY_detail)
+          .attr("transform", `translate(0,${vp.height - 30})`)
+          .attr("color", "#434343");
+
+        // axisY_detail
+        //   .selectAll("g.tick")
+        //   .selectAll("line")
+
+        //   .attr("x1", -5)
+        //   .attr("x2", vp.width * detail_size - 100);
       }
       function renderBPM(data, duration) {
         let scaleX = d3
@@ -361,12 +391,15 @@
           })
           .attr("stroke", (d, i) => (d.children != undefined ? "#dfceb4" : ""))
           .attr("opacity", (d) => opacity_scale(d.data.bpm))
+          .attr("cursor", (d) => (d.children != undefined ? "" : "pointer"))
           .on("click", (e) => {
             curr_detail = e.path[0].__data__.data;
             if (curr_detail.children == undefined) {
               svg_detail.selectAll("svg").remove();
               svg_bpm.selectAll("path").remove();
               color_index = 0;
+              max_velocity = 0;
+              min_velocity = 1;
               load_data(curr_detail.author + "/" + curr_detail.name);
               let midi = document.getElementById("midi-player");
               let name = document.getElementById("name_text");
