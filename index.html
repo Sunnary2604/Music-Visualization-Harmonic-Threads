@@ -184,14 +184,14 @@
           .domain([0, time + 0.5])
           .range([0, vp.width * detail_size - 100]);
 
-        var y = d3.scaleLog().domain([0.2, 1]).range([0, 25]);
+        var y = d3.scalePow().domain([0.2, 1]).range([0, 20]);
 
         let midi = d3.scaleLinear().domain([110, 10]).range([0, vp.height]);
 
         let opacity_scale = d3
-          .scaleLinear()
-          .domain([min_velocity, max_velocity])
-          .range([0.2, 1]);
+          .scalePow()
+          .domain([min_velocity * 1.2, max_velocity])
+          .range([0.1, 0.9]);
         let area = d3
           .area()
           .x(function (d) {
@@ -228,7 +228,8 @@
               .attr("opacity", (d) => opacity_scale(d[0].velocity))
               .attr("d", (d) => area(d))
               .on("mouseover", (e) => {
-                svg_detail.selectAll("#" + e.path[0].id).attr("opacity", 1);
+                let p = e.path || (e.composedPath && e.composedPath()) || "";
+                svg_detail.selectAll("#" + p[0].id).attr("opacity", 1);
                 instrument_path
                   .append("text")
                   .text(data.name != "" ? data.name : instrument.name)
@@ -241,9 +242,10 @@
                   .attr("text-anchor", "middle");
               })
               .on("mouseout", (e) => {
+                let p = e.path || (e.composedPath && e.composedPath()) || "";
                 instrument_path.selectAll("text").remove();
                 svg_detail
-                  .selectAll("#" + e.path[0].id)
+                  .selectAll("#" + p[0].id)
                   .attr("opacity", (d) => opacity_scale(d[0].velocity));
               });
 
@@ -263,7 +265,8 @@
                 .attr("id", "instrument_" + index)
                 .attr("d", (d) => area(d))
                 .on("mouseover", (e) => {
-                  svg_detail.selectAll("#" + e.path[0].id).attr("opacity", 1);
+                  let p = e.path || (e.composedPath && e.composedPath()) || "";
+                  svg_detail.selectAll("#" + p[0].id).attr("opacity", 1);
 
                   instrument_path
                     .append("text")
@@ -277,8 +280,9 @@
                     .attr("text-anchor", "start");
                 })
                 .on("mouseout", (e) => {
+                  let p = e.path || (e.composedPath && e.composedPath()) || "";
                   instrument_path.selectAll("text").remove();
-                  svg_detail.selectAll("#" + e.path[0].id).attr("opacity", 0.7);
+                  svg_detail.selectAll("#" + p[0].id).attr("opacity", 0.7);
                 });
             }
           }
@@ -393,7 +397,9 @@
           .attr("opacity", (d) => opacity_scale(d.data.bpm))
           .attr("cursor", (d) => (d.children != undefined ? "" : "pointer"))
           .on("click", (e) => {
-            curr_detail = e.path[0].__data__.data;
+            console.log(e.path || (e.composedPath && e.composedPath()) || "");
+            let p = e.path || (e.composedPath && e.composedPath()) || "";
+            curr_detail = p[0].__data__.data;
             if (curr_detail.children == undefined) {
               svg_detail.selectAll("svg").remove();
               svg_bpm.selectAll("path").remove();
