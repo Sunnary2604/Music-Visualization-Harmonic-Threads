@@ -184,13 +184,14 @@
           .domain([0, time + 0.5])
           .range([0, vp.width * detail_size - 100]);
 
-        var y = d3.scalePow().domain([0.2, 1]).range([0, 20]);
+        var y = d3.scaleLinear().domain([0, 1]).range([0, 30]);
 
         let midi = d3.scaleLinear().domain([110, 10]).range([0, vp.height]);
-
+        console.log(min_velocity);
+        min_velocity = Math.max(0.2, min_velocity);
         let opacity_scale = d3
-          .scalePow()
-          .domain([min_velocity * 1.2, max_velocity])
+          .scaleLinear()
+          .domain([min_velocity, max_velocity])
           .range([0.1, 0.9]);
         let area = d3
           .area()
@@ -238,12 +239,13 @@
                   .attr("fill", "#434343")
                   .attr("font-size", "16px")
                   .attr("z-index", 999)
+                  .attr("class","instrument_name")
                   .attr("font-weight", "800")
                   .attr("text-anchor", "middle");
               })
               .on("mouseout", (e) => {
                 let p = e.path || (e.composedPath && e.composedPath()) || "";
-                instrument_path.selectAll("text").remove();
+                instrument_path.selectAll(".instrument_name").remove();
                 svg_detail
                   .selectAll("#" + p[0].id)
                   .attr("opacity", (d) => opacity_scale(d[0].velocity));
@@ -274,6 +276,7 @@
                     .attr("x", e.offsetX + 20)
                     .attr("y", e.offsetY - 20)
                     .attr("fill", "#434343")
+                    .attr("class","instrument_name")
                     .attr("z-index", 999)
                     .attr("font-size", "16px")
                     .attr("font-weight", "800")
@@ -281,7 +284,7 @@
                 })
                 .on("mouseout", (e) => {
                   let p = e.path || (e.composedPath && e.composedPath()) || "";
-                  instrument_path.selectAll("text").remove();
+                  instrument_path.selectAll(".instrument_name").remove();
                   svg_detail.selectAll("#" + p[0].id).attr("opacity", 0.7);
                 });
             }
@@ -355,7 +358,7 @@
           .scalePow()
           .domain([0, 1226])
           .range([margin * 0.1, margin * 0.5]);
-        let opacity_scale = d3.scaleLog().domain([40, 250]).range([0.1, 1]);
+        let opacity_scale = d3.scaleLog().domain([40, 250]).range([0.1, 0.8]);
 
         let data_copy = { children: [] };
 
@@ -382,7 +385,7 @@
           .selectAll("#selector")
           .data(root.descendants())
           .join("g");
-        dots
+        let circles = dots
           .append("circle")
           .attr("r", (d) => d.r)
           .attr("cx", (d, i) => d.x)
@@ -415,11 +418,11 @@
               midi.src = `./data/${curr_detail.author}/${curr_detail.name}`;
               name.innerHTML = curr_detail.name.split(".mid")[0];
               composer.innerHTML = curr_detail.author;
-              tone.innerHTML = curr_detail.key + ` (${curr_detail.scale})`;
+              tone.innerHTML = curr_detail.key??"" + ` (${curr_detail.scale})`;
               bpm.innerHTML = Math.round(curr_detail.bpm);
             }
           });
-        dots
+        let texts = dots
           .append("text")
           .text((d, i) => {
             return d.children == undefined ? "" : d.children[0].data.author;
