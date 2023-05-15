@@ -226,8 +226,8 @@
             } else result = midi(d.midi) - y(d.velocity) / 2;
             result = midi(d.midi) - y(d.velocity) / 2;
             return result;
-          });
-        // .curve(d3.curveBasis);
+          })
+          .curve(d3.curveBasis);
         let start = 1,
           end = 2;
 
