@@ -10,7 +10,7 @@
     <div style="display: flex; flex-direction: column">
       <div style="display: flex; height: calc(60vh - 30px)">
         <div class="view" style="width: 40vw; padding: 20px" id="info">
-          <div style="font-size: 24px; font-weight: 800">MUSIC BOARD</div>
+          <!-- <div style="font-size: 24px; font-weight: 800">MUSIC BOARD</div> -->
           <div>
             <div class="title">Name</div>
             <div class="subtitle" id="name_text"></div>
@@ -21,16 +21,32 @@
             <div class="title">BPM</div>
             <div class="subtitle" id="bpm_text"></div>
             <div id="bpm"></div>
+            <midi-player
+              style="margin-top: 20px"
+              id="midi-player"
+              sound-font
+              visualizer="#myVisualizer"
+            >
+            </midi-player>
           </div>
-          <midi-player
-            style="margin-top: 20px; margin-left: 200px"
-            id="midi-player"
-            sound-font
-            visualizer="#myVisualizer"
-          >
-          </midi-player>
+          <div></div>
         </div>
-        <div class="view" id="overview" style="width: 60vw"></div>
+        <div
+          class="view"
+          id="overview"
+          style="width: calc(60vh - 30px); display: flex; flex-direction: row"
+        ></div>
+        <div
+          class="view"
+          style="
+            position: fixed;
+            right: 10px;
+            width: calc(20vw - 30px);
+            height: calc(60vh - 60px);
+            max-width: 20vw;
+            padding: 10px;
+          "
+        ></div>
       </div>
       <div
         class="view"
@@ -48,7 +64,7 @@
           margin.left -
           margin.right -
           20,
-        height: document.documentElement.clientHeight * 0.4 - 20,
+        height: document.documentElement.clientHeight * 0.4 - 40,
       };
       let curr_detail = "";
       let data = [];
@@ -64,14 +80,14 @@
       );
       let svg_overview = define_svg(
         "#overview",
-        document.documentElement.clientWidth * 0.6 - 50,
+        document.documentElement.clientWidth * 0.4 - 50,
         document.documentElement.clientHeight * 0.6 - 30,
-        10,
+        -document.documentElement.clientWidth * 0.15 + 45,
         10
       );
       let svg_bpm = define_svg(
         "#bpm",
-        document.documentElement.clientWidth * 0.4 - 30,
+        document.documentElement.clientWidth * 0.2 - 30,
         document.documentElement.clientHeight * 0.2 - 30,
         15,
         15
@@ -239,7 +255,7 @@
                   .attr("fill", "#434343")
                   .attr("font-size", "16px")
                   .attr("z-index", 999)
-                  .attr("class","instrument_name")
+                  .attr("class", "instrument_name")
                   .attr("font-weight", "800")
                   .attr("text-anchor", "middle");
               })
@@ -276,7 +292,7 @@
                     .attr("x", e.offsetX + 20)
                     .attr("y", e.offsetY - 20)
                     .attr("fill", "#434343")
-                    .attr("class","instrument_name")
+                    .attr("class", "instrument_name")
                     .attr("z-index", 999)
                     .attr("font-size", "16px")
                     .attr("font-weight", "800")
@@ -418,7 +434,8 @@
               midi.src = `./data/${curr_detail.author}/${curr_detail.name}`;
               name.innerHTML = curr_detail.name.split(".mid")[0];
               composer.innerHTML = curr_detail.author;
-              tone.innerHTML = curr_detail.key??"" + ` (${curr_detail.scale})`;
+              tone.innerHTML =
+                curr_detail.key ?? "" + ` (${curr_detail.scale})`;
               bpm.innerHTML = Math.round(curr_detail.bpm);
             }
           });
@@ -519,19 +536,25 @@
       .main {
         background-color: #c7c6b6;
       }
+      /* handwriting style */
       .title {
         font-size: 22px;
         font-weight: 800;
         color: #434343;
         margin: 10px 10px 10px 10px;
-        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        /* font-family: Verdana, Geneva, Tahoma, sans-serif; */
+
+        /* font-family: "Nanum Pen Script", cursive; */
       }
       .subtitle {
         font-size: 20px;
         font-weight: 500;
-        color: #bec2bc;
+        color: #7a7b78;
         margin-left: 10px;
-        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        /* font-family: "Nanum Pen Script", cursive; */
+      }
+      * {
+        font-family: "Copperplate Gothic Light", cursive;
       }
     </style>
   </body>
