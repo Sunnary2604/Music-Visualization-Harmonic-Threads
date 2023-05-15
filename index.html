@@ -210,8 +210,8 @@
             } else result = midi(d.midi) - y(d.velocity) / 2;
             result = midi(d.midi) - y(d.velocity) / 2;
             return result;
-          });
-        // .curve(d3.curveBasis);
+          })
+          .curve(d3.curveBasis);
         let start = 1,
           end = 2;
 
@@ -239,7 +239,7 @@
                   .attr("fill", "#434343")
                   .attr("font-size", "16px")
                   .attr("z-index", 999)
-                  .attr("class","instrument_name")
+                  .attr("class", "instrument_name")
                   .attr("font-weight", "800")
                   .attr("text-anchor", "middle");
               })
@@ -276,7 +276,7 @@
                     .attr("x", e.offsetX + 20)
                     .attr("y", e.offsetY - 20)
                     .attr("fill", "#434343")
-                    .attr("class","instrument_name")
+                    .attr("class", "instrument_name")
                     .attr("z-index", 999)
                     .attr("font-size", "16px")
                     .attr("font-weight", "800")
@@ -418,7 +418,8 @@
               midi.src = `./data/${curr_detail.author}/${curr_detail.name}`;
               name.innerHTML = curr_detail.name.split(".mid")[0];
               composer.innerHTML = curr_detail.author;
-              tone.innerHTML = curr_detail.key??"" + ` (${curr_detail.scale})`;
+              tone.innerHTML =
+                curr_detail.key ?? "" + ` (${curr_detail.scale})`;
               bpm.innerHTML = Math.round(curr_detail.bpm);
             }
           });
