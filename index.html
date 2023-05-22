@@ -9,6 +9,36 @@
   <body class="main">
     <div style="display: flex; flex-direction: column">
       <div style="display: flex; height: calc(60vh - 30px)">
+        <div
+          class="view"
+          id="overview"
+          style="
+            width: calc(80vw - 30px);
+            display: flex;
+            flex-direction: row;
+            padding: 10px;
+          "
+        >
+          <div
+            class="subtitle"
+            style="
+              line-height: 130%;
+              width: calc(100vw - 30px);
+              height: calc(60vh - 100px);
+              max-width: 20vw;
+              padding: 10px 30px 30px 30px;
+            "
+          >
+            <div style="font-size: 30px; line-height: 50px; font-weight: 800">
+              Harmonic Threads
+            </div>
+            Spanning the sonorous years from
+            <span class="intro">1750 - 1850</span>, our symphony of sounds
+            houses <span class="intro">300 </span> sublime compositions, crafted
+            by the hands of <span class="intro">28</span>
+            virtuosic composers, all waiting to serenade your senses.
+          </div>
+        </div>
         <div class="view" style="width: 40vw; padding: 20px" id="info">
           <!-- <div style="font-size: 24px; font-weight: 800">MUSIC BOARD</div> -->
           <div>
@@ -21,43 +51,35 @@
             <div class="title">BPM</div>
             <div class="subtitle" id="bpm_text"></div>
             <div id="bpm"></div>
-            <midi-player
-              style="margin-top: 20px"
-              id="midi-player"
-              sound-font
-              visualizer="#myVisualizer"
-            >
-            </midi-player>
           </div>
           <div></div>
         </div>
-        <div
-          class="view"
-          id="overview"
-          style="width: calc(60vh - 30px); display: flex; flex-direction: row"
-        ></div>
-        <div
-          class="view"
-          style="
-            position: fixed;
-            right: 10px;
-            width: calc(20vw - 30px);
-            height: calc(60vh - 60px);
-            max-width: 20vw;
-            padding: 10px;
-          "
-        ></div>
       </div>
       <div
         class="view"
         id="detail"
         style="height: 40vh; width: calc(100vw - 30px); overflow-x: scroll"
-      ></div>
+      >
+        <midi-player
+          style="
+            margin: 5px;
+            position: fixed;
+            top: 59vh;
+            left: 20px;
+            height: 30px;
+            width: 250px;
+          "
+          id="midi-player"
+          sound-font
+          visualizer="#myVisualizer"
+        >
+        </midi-player>
+      </div>
     </div>
 
     <script>
       // load a midi file in the browser
-      let margin = { top: 0, right: 40, bottom: 0, left: 0 };
+      let margin = { top: 0, right: 40, bottom: 15, left: 0 };
       let vp = {
         width:
           document.documentElement.clientWidth -
@@ -81,13 +103,13 @@
       let svg_overview = define_svg(
         "#overview",
         document.documentElement.clientWidth * 0.4 - 50,
-        document.documentElement.clientHeight * 0.6 - 30,
-        -document.documentElement.clientWidth * 0.15 + 45,
-        10
+        document.documentElement.clientHeight * 0.6 - 10,
+        -document.documentElement.clientWidth * 0.15 + 65,
+        0
       );
       let svg_bpm = define_svg(
         "#bpm",
-        document.documentElement.clientWidth * 0.2 - 30,
+        document.documentElement.clientWidth * 0.32 - 30,
         document.documentElement.clientHeight * 0.2 - 30,
         15,
         15
@@ -200,9 +222,12 @@
           .domain([0, time + 0.5])
           .range([0, vp.width * detail_size - 100]);
 
-        var y = d3.scaleLinear().domain([0, 1]).range([0, 30]);
+        var y = d3.scaleLinear().domain([0, 1]).range([0, 20]);
 
-        let midi = d3.scaleLinear().domain([110, 10]).range([0, vp.height]);
+        let midi = d3
+          .scaleLinear()
+          .domain([100, 10])
+          .range([0, vp.height + margin.top + margin.bottom]);
         console.log(min_velocity);
         min_velocity = Math.max(0.2, min_velocity);
         let opacity_scale = d3
@@ -315,21 +340,14 @@
           .append("g")
           .attr("class", "axisY")
           .call(axisY_detail)
-          .attr("transform", `translate(0,${vp.height - 30})`)
+          .attr("transform", `translate(0,${vp.height - 10})`)
           .attr("color", "#434343");
-
-        // axisY_detail
-        //   .selectAll("g.tick")
-        //   .selectAll("line")
-
-        //   .attr("x1", -5)
-        //   .attr("x2", vp.width * detail_size - 100);
       }
       function renderBPM(data, duration) {
         let scaleX = d3
           .scaleLinear()
           .domain([0, duration])
-          .range([0, document.documentElement.clientWidth * 0.4 - 50]);
+          .range([0, document.documentElement.clientWidth * 0.32 - 30]);
         let scaleY = d3
           .scaleLinear()
           .domain([380, 0])
@@ -341,7 +359,8 @@
           })
           .y(function (d) {
             return scaleY(d.bpm);
-          });
+          })
+          .curve(d3.curveBasis);
         let axisY = d3.axisLeft(scaleY);
         let axisYG = svg_bpm
           .append("g")
@@ -352,10 +371,9 @@
         axisYG
           .selectAll("g.tick")
           .selectAll("line")
-
           .attr("x1", -5)
           .attr("x2", document.documentElement.clientWidth * 0.4 - 30)
-
+          .style("stroke", "#dfceb4")
           .attr("stroke-dasharray", "5, 5");
         svg_bpm
           .selectAll("#selector")
@@ -363,7 +381,7 @@
           .join("path")
           .attr("transform", "translate(30,0)")
           .style("fill", "none") //此处需要将处理是为了折线只显示线条
-          .style("stroke", "#775039")
+          .style("stroke", "#8b7042")
           .style("stroke-width", 3)
           .attr("d", line);
       }
@@ -552,6 +570,14 @@
         color: #7a7b78;
         margin-left: 10px;
         /* font-family: "Nanum Pen Script", cursive; */
+      }
+      .intro {
+        font-size: 22px;
+        font-weight: 800;
+        color: #434343;
+        margin: 10px 10px 10px 10px;
+        text-decoration: underline;
+        font-style: italic;
       }
       * {
         font-family: "Copperplate Gothic Light", cursive;
